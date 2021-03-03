@@ -17,9 +17,9 @@ function flipCard() {
   if (this === firstCard) return;
   
   
-  if (this.children[0].alt != "") {
-	talk(this.children[0].alt);  
-  }
+  //if (this.children[0].alt != "") {
+	//talk(this.children[0].alt);  
+  //}
   
   this.classList.add('flip');
 
