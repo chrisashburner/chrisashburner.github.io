@@ -1,0 +1,84 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Memory Game</title>
+
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body ondragstart="return false;" ondrop="return false;">
+
+  <section class="player-score">
+	<p class="score-board" id="playerOneScoreDisplay">Player 1 Score: 0</p>
+	<p class="score-board" id="playerTwoScoreDisplay">Player 2 Score: 0</p>
+	<p class="score-board" id="playerTurnDisplay">Player 1's Turn</p>
+  </section>
+  
+  
+  <section id="gameGrid" class="memory-game">
+  
+  <script>
+	var gridSize = 10;
+
+	//grid setup
+	function setupGrid(gridSize) {
+		
+		var gameGrid = document.getElementById("gameGrid");
+		
+		var i;
+		for (i = 3; i < gridSize + 3; i++) {
+				gameGrid.innerHTML += '<div class="memory-card" data-framework="' + String.fromCharCode(94 + i) + '">\
+											<img id="' + String.fromCharCode(94 + i) + '1" class="front-face" src="" alt="" />\
+											<img class="back-face" src="img/back.png" alt="" />\
+										  </div>\
+										  <div class="memory-card" data-framework="' + String.fromCharCode(94 + i) + '">\
+											<img id="' + String.fromCharCode(94 + i) + '2" class="front-face" src="" alt="" />\
+											<img class="back-face" src="img/back.png" alt="" />\
+										  </div>';
+		}
+	 
+		
+		
+	}
+		setupGrid(gridSize);
+  </script>
+	
+  
+  
+  </section>
+  
+    <div class="prompt">
+      <p>Do the cards match</p>
+	  <button class="yes">Yes</button>
+	  <button class="no">No</button>
+    </div>
+	
+	<div class="speechPrompt">
+      <p>Say the word</p>
+	  <button class="retry">retry</button>
+	  <button class="done">done</button>
+    </div>
+   
+  
+  <!--p class="hints"></p>
+    <div>
+        <p class="output"><em>...diagnostic messages</em></p>
+    </div-->
+	
+	<!--button>Start new test</button>
+
+    <div>
+        <p class="phrase">Phrase...</p>
+        <p class="result">Right or wrong?</p>
+        <p class="output">...diagnostic messages</p>
+    </div-->
+
+  <script src="https://cdn.jsdelivr.net/npm/text-image/dist/text-image.js"></script>
+  <script type="text/javascript" src="data.json"></script>
+  <script src="scripts.js"></script>
+  
+  
+</body>
+</html>
