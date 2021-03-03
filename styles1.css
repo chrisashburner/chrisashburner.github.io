@@ -1,1 +1,10 @@
-* {font-size: 1em; }
+.front-face,
+.back-face {
+  width: 80px;
+  height: 80px;  
+  backface-visibility: hidden;
+  object-fit: scale-down;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
