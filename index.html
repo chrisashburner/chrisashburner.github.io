@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="styles.css">
 
     <title>Memory Game</title>
   </head>
@@ -36,7 +36,7 @@
     <section id="gameGrid" class="memory-game">
   
 
-      <div class="d-flex bd-highlight justify-content-start">
+      <!--div class="d-flex bd-highlight justify-content-start">
         <div class="p-1 flex-fill bd-highlight">
           <div class="shadow p-1 mb-5 bg-white rounded">
             <img id="a1" class="front-face" src="" alt="" />
@@ -62,7 +62,7 @@
             <img id="c1" class="front-face" src="" alt="" />
           </div>
         </div>
-      </div>
+      </div-->
 
     <!--div class="row">
       <div class="col-md-4">          
@@ -87,7 +87,7 @@
 	var gridSize = 10;
 
 	//grid setup
-	/*function setupGrid(gridSize) {
+	function setupGrid(gridSize) {
 		
 		var gameGrid = document.getElementById("gameGrid");
 		
@@ -95,18 +95,18 @@
 		for (i = 3; i < gridSize + 3; i++) {
 				gameGrid.innerHTML += '<div class="memory-card" data-framework="' + String.fromCharCode(94 + i) + '">\
 											<img id="' + String.fromCharCode(94 + i) + '1" class="front-face" src="" alt="" />\
-											<img class="back-face" src="img/back.png" alt="" />\
+											<!--img class="back-face" src="img/back.png" alt="" /-->\
 										  </div>\
 										  <div class="memory-card" data-framework="' + String.fromCharCode(94 + i) + '">\
 											<img id="' + String.fromCharCode(94 + i) + '2" class="front-face" src="" alt="" />\
-											<img class="back-face" src="img/back.png" alt="" />\
+											<!--img class="back-face" src="img/back.png" alt="" /-->\
 										  </div>';
 		}
 	 
 		
 		
 	}
-		setupGrid(gridSize);*/
+		setupGrid(gridSize);
   </script>
 	
   
