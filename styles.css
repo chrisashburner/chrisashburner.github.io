@@ -14,14 +14,38 @@ body {
   background: #1C7CCC;
 }
 
-.memory-game {
+@media all and (orientation:portrait) {
+  /* Styles for Portrait screen */
+  .memory-game {
+    width: 640px;
+    height: 960px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+  }
+
+}
+@media all and (orientation:landscape) {
+  /* Styles for Landscape screen */
+  .memory-game {
+    width: 960px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+  }
+}
+
+/*.memory-game {
   width: 960px;
   height: 640px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   perspective: 1000px;
-}
+}*/
 
 .memory-card {
   width: calc(20% - 10px);
