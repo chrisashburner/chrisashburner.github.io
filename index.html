@@ -24,6 +24,15 @@
         <button class="no btn btn-primary">No</button>
       </div>
     </div>
+
+    <div id="speechPrompt" class="card text-center invisible speechPrompt">
+      <div class="card-body">
+        <p class="card-title">Do the cards match?</p>      
+        <button class="retry btn btn-primary">Retry</button>
+        <div class="divider"></div>
+        <button class="done btn btn-primary">Done</button>
+      </div>
+    </div>
     
     <section class="player-score scaled">
       <div class="d-flex bd-highlight justify-content-center">
@@ -39,98 +48,35 @@
       </div>      
     </section>   
      
-    <section id="gameGrid" class="memory-game">
+    <section id="gameGrid" class="memory-game">   
   
+    <script>
+    var gridSize = 10;
 
-      <!--div class="d-flex bd-highlight justify-content-start">
-        <div class="p-1 flex-fill bd-highlight">
-          <div class="shadow p-1 mb-5 bg-white rounded">
-            <img id="a1" class="front-face" src="" alt="" />
-          </div>
-        </div>
-        <div class="p-1 flex-fill bd-highlight">
-          <div class="shadow p-1 mb-5 rounded">
-            <img id="a2" class="front-face" src="" alt="" />
-          </div>
-        </div>
-        <div class="p-1 flex-fill bd-highlight">
-          <div class="shadow p-1 mb-5 bg-white rounded">
-            <img id="b1" class="front-face" src="" alt="" />
-          </div>
-        </div>
-        <div class="p-1 flex-fill bd-highlight">
-          <div class="shadow p-1 mb-5 bg-white rounded">
-            <img id="b2" class="front-face" src="" alt="" />
-          </div>
-        </div>
-        <div class="p-1 flex-fill bd-highlight">
-          <div class="shadow p-1 mb-5 bg-white rounded">
-            <img id="c1" class="front-face" src="" alt="" />
-          </div>
-        </div>
-      </div-->
-
-    <!--div class="row">
-      <div class="col-md-4">          
-          <div class="shadow p-1 mb-5 bg-white rounded">Regular shadow</div>
-      </div>
-      <div class="col-md-4">          
-          <div class="shadow p-1 mb-5 bg-white rounded">Regular shadow</div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">          
-          <div class="shadow p-1 mb-5 bg-white rounded">Regular shadow</div>
-      </div>
-      <div class="col-md-4">
-          <div class="shadow p-1 mb-5 bg-white rounded">Regular shadow</div>
-      </div>
-    </div>
-  </div-->
+    //grid setup
+    function setupGrid(gridSize) {
+      
+      var gameGrid = document.getElementById("gameGrid");
+      
+      var i;
+      for (i = 3; i < gridSize + 3; i++) {
+          gameGrid.innerHTML += '<div class="memory-card" data-framework="' + String.fromCharCode(94 + i) + '">\
+                        <img id="' + String.fromCharCode(94 + i) + '1" class="front-face" src="" alt="" />\
+                        <!--img class="back-face" src="img/back.png" alt="" /-->\
+                        </div>\
+                        <div class="memory-card" data-framework="' + String.fromCharCode(94 + i) + '">\
+                        <img id="' + String.fromCharCode(94 + i) + '2" class="front-face" src="" alt="" />\
+                        <!--img class="back-face" src="img/back.png" alt="" /-->\
+                        </div>';
+      }
     
-  
-  <script>
-	var gridSize = 10;
-
-	//grid setup
-	function setupGrid(gridSize) {
-		
-		var gameGrid = document.getElementById("gameGrid");
-		
-		var i;
-		for (i = 3; i < gridSize + 3; i++) {
-				gameGrid.innerHTML += '<div class="memory-card" data-framework="' + String.fromCharCode(94 + i) + '">\
-											<img id="' + String.fromCharCode(94 + i) + '1" class="front-face" src="" alt="" />\
-											<!--img class="back-face" src="img/back.png" alt="" /-->\
-										  </div>\
-										  <div class="memory-card" data-framework="' + String.fromCharCode(94 + i) + '">\
-											<img id="' + String.fromCharCode(94 + i) + '2" class="front-face" src="" alt="" />\
-											<!--img class="back-face" src="img/back.png" alt="" /-->\
-										  </div>';
-		}
-	 
-		
-		
-	}
-		setupGrid(gridSize);
-  </script>
-  
-  
-	
-  
-  
-  </section>
-  
-
-  
-  
-  
-	
-	<div class="speechPrompt">
-      <p>Say the word</p>
-	  <button class="retry">retry</button>
-	  <button class="done">done</button>
-    </div>
+      
+      
+    }
+      setupGrid(gridSize);
+    </script>
+    
+    </section>
    
   
   <!--p class="hints"></p>
@@ -150,17 +96,10 @@
   <script type="text/javascript" src="data.json"></script>
   <script src="scripts.js"></script>
   <script src="https://code.responsivevoice.org/responsivevoice.js?key=RPARJK7G"></script>
-    <!-- Optional JavaScript; choose one of the two! -->
-
     
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
-    -->
     
   
 </body>

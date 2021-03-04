@@ -47,7 +47,7 @@ body {
   .prompt {
     position: absolute; 
     z-index:1000; 
-    left:35%; 
+    left:40%; 
     transform: scale(0.9);
   }
   
