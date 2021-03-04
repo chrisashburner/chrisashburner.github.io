@@ -70,7 +70,7 @@ function checkForMatch() {
   var different = firstCard.firstElementChild.id.substring(2, 1) !== secondCard.firstElementChild.id.substring(2, 1);
 
   if (different) {
-	  prompt.style.visibility = "visible";
+	  prompt.classList.remove("invisible");
     lockBoard = true;
 	  
   } else {
@@ -117,7 +117,7 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 
 var yesButton = document.querySelector('.yes');
 var noButton = document.querySelector('.no');
-var prompt = document.querySelector(".prompt");
+var prompt = document.querySelector("#prompt");
 
 var speechPrompt = document.querySelector(".speechPrompt");
 var doneButton = document.querySelector(".done");
@@ -165,7 +165,7 @@ function done() {
 
 function yes() {
 	console.log("Yes");
-	prompt.style.visibility = "hidden";
+	prompt.classList.add("invisible");
 	
 	let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
 	
@@ -190,7 +190,7 @@ function yes() {
 
 function no() {
 	console.log("No");
-	prompt.style.visibility = "hidden";
+	prompt.classList.add("invisible");
 	
 	let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
 	
