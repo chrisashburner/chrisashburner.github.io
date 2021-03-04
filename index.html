@@ -18,7 +18,7 @@
     
     <div id="prompt" class="card text-center invisible prompt">
       <div class="card-body">
-        <p class="card-title">Do the cards match?</p>      
+        <h6 class="card-title">Do the cards match?</h6>      
         <button class="yes btn btn-primary">Yes</button>
         <div class="divider"></div>
         <button class="no btn btn-primary">No</button>
@@ -27,11 +27,18 @@
 
     <div id="speechPrompt" class="card text-center invisible speechPrompt">
       <div class="card-body">
-        <p class="card-title">Do the cards match?</p>      
+        <h6 class="card-title">Say the Korean word to win the cards!</h6>      
+        <br/>
         <button class="retry btn btn-primary">Retry</button>
         <div class="divider"></div>
         <button class="done btn btn-primary">Done</button>
       </div>
+      <div class="card-footer">
+        <p class="phrase">Phrase...</p>
+        <p class="result">Right or wrong?</p>
+        <p class="output">...diagnostic messages</p>        
+      </div>
+      
     </div>
     
     <section class="player-score scaled">
@@ -48,61 +55,39 @@
       </div>      
     </section>   
      
-    <section id="gameGrid" class="memory-game">   
-  
+  <section id="gameGrid" class="memory-game">  
     <script>
-    var gridSize = 10;
+      var gridSize = 10;
 
-    //grid setup
-    function setupGrid(gridSize) {
-      
-      var gameGrid = document.getElementById("gameGrid");
-      
-      var i;
-      for (i = 3; i < gridSize + 3; i++) {
-          gameGrid.innerHTML += '<div class="memory-card" data-framework="' + String.fromCharCode(94 + i) + '">\
-                        <img id="' + String.fromCharCode(94 + i) + '1" class="front-face" src="" alt="" />\
-                        <!--img class="back-face" src="img/back.png" alt="" /-->\
-                        </div>\
-                        <div class="memory-card" data-framework="' + String.fromCharCode(94 + i) + '">\
-                        <img id="' + String.fromCharCode(94 + i) + '2" class="front-face" src="" alt="" />\
-                        <!--img class="back-face" src="img/back.png" alt="" /-->\
-                        </div>';
+      //grid setup
+      function setupGrid(gridSize) {
+        
+        var gameGrid = document.getElementById("gameGrid");
+        
+        var i;
+        for (i = 3; i < gridSize + 3; i++) {
+            gameGrid.innerHTML += '<div class="memory-card" data-framework="' + String.fromCharCode(94 + i) + '">\
+                          <img id="' + String.fromCharCode(94 + i) + '1" class="front-face" src="" alt="" />\
+                          <!--img class="back-face" src="img/back.png" alt="" /-->\
+                          </div>\
+                          <div class="memory-card" data-framework="' + String.fromCharCode(94 + i) + '">\
+                          <img id="' + String.fromCharCode(94 + i) + '2" class="front-face" src="" alt="" />\
+                          <!--img class="back-face" src="img/back.png" alt="" /-->\
+                          </div>';
+        }      
+        
       }
-    
-      
-      
-    }
-      setupGrid(gridSize);
-
-      
-    </script>
-
-
-    
-    </section>
-   
-  
-  <!--p class="hints"></p>
-    <div>
-        <p class="output"><em>...diagnostic messages</em></p>
-    </div-->
-	
-	<!--button>Start new test</button>
-
-    <div>
-        <p class="phrase">Phrase...</p>
-        <p class="result">Right or wrong?</p>
-        <p class="output">...diagnostic messages</p>
-    </div-->
+      setupGrid(gridSize);      
+    </script>    
+  </section>    
 
   <script src="https://cdn.jsdelivr.net/npm/text-image/dist/text-image.js"></script>
   <script type="text/javascript" src="data.json"></script>
   <script src="scripts.js"></script>
-  <script src="https://code.responsivevoice.org/responsivevoice.js?key=RPARJK7G"></script>
-    
+      
   <!-- Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-      
-</body>
+  <script src="https://code.responsivevoice.org/responsivevoice.js?key=RPARJK7G"></script>
+  
+  </body>
 </html>
