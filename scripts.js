@@ -291,7 +291,7 @@ function speechToText(phrase) {
 	}
 	console.log(speechResults);
 	
-    if(speechResults.includes(phrase) /*speechResult === phrase*/) {
+    if(speechResults.includes(phrase)) {
       resultPara.textContent = 'I heard the correct phrase!';
       resultPara.style.background = 'lime';
     } else {
