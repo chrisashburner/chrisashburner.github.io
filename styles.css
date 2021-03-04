@@ -10,10 +10,6 @@ body {
   background: #29465b;
 }
 
-.score-board{
-  background: #1C7CCC;
-}
-
 @media all and (orientation:portrait) {
   /* Styles for Portrait screen */
   .memory-game {
@@ -41,7 +37,7 @@ body {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    perspective: 100px;
+    perspective: 1000px;
   }   
 
   .prompt {
@@ -68,9 +64,11 @@ body {
   height: calc(25% - 10px);
   margin: 5px;
   position: relative;
+  cursor: pointer;
   transform: scale(1);
   transform-style: preserve-3d;
   transition: transform .3s;
+  transform-origin: center right;
   box-shadow: 1px 1px 1px rgba(0,0,0,.3);
 }
 
@@ -80,7 +78,7 @@ body {
 }
 
 .memory-card.flip {
-  transform: rotateY(180deg);
+  transform: translateX(-100%) rotateY(-180deg);
 }
 
 .front-face,
