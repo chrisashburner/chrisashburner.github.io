@@ -12,12 +12,23 @@ var rateValue = document.querySelector('.rate-value');
 var voices = [];
 
 function populateVoiceList() {
-  voices = synth.getVoices().sort(function (a, b) {
-      const aname = a.name.toUpperCase(), bname = b.name.toUpperCase();
-      if ( aname < bname ) return -1;
-      else if ( aname == bname ) return 0;
-      else return +1;
+  let voicesall = speechSynthesis.getVoices();
+
+  console.log(voicesall);
+  let vuris = [];
+  let voices = [];
+  voicesall.forEach(function(obj,index){
+    let uri = obj.voiceURI;
+	
+    if (!vuris.includes(uri) && obj.lang == "ko-KR" && obj.voiceURI.includes("Google")){
+      vuris.push(uri);
+      voices.push(obj);
+    }
   });
+  voices.forEach(function(obj,index){obj.id = index;});
+
+  console.log(voices);
+  //return voices;
   var selectedIndex = voiceSelect.selectedIndex < 0 ? 0 : voiceSelect.selectedIndex;
   voiceSelect.innerHTML = '';
   for(i = 0; i < voices.length ; i++) {
@@ -57,12 +68,16 @@ function speak(){
     for(i = 0; i < voices.length ; i++) {
       if(voices[i].name === selectedOption) {
         utterThis.voice = voices[i];
+        
         break;
       }
     }
+    utterThis.lang = "ko-KR";
     utterThis.pitch = pitch.value;
     utterThis.rate = rate.value;
     synth.speak(utterThis);
+    console.log(utterThis);
+    
   }
 }
 
