@@ -14,6 +14,7 @@ let firstCard, secondCard;
 
 function flipCard() {
   if (lockBoard) return;
+  if (secondCard) return;
   if (this === firstCard) return;
   
   
@@ -62,13 +63,6 @@ function increasePlayerScore(points, player) {
 	}
 	
 }
-
-function cardSpeechMatch(speech, card) {
-	//
-	console.log(speech, card);
-}
-
-
 
 function checkForMatch() {
   let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
@@ -245,8 +239,13 @@ for (i = 0; i < JSON_data.length; i++) {
 }
 
 //Text to Speech
-function talk(text){
+function talk(text){  
+  lockBoard = true;
   responsiveVoice.speak(text, 'Korean Female');
+  setTimeout(() => {
+    lockBoard = false;
+  }, 1000);
+  
 }
 
 
