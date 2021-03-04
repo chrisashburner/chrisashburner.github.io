@@ -16,6 +16,15 @@
     <div class="container">
     <h7>Memory Game</h7>
     
+    <div id="prompt" style="position: absolute; z-index:1000; left:35%; transform: scale(0.5);" class="card text-center invisible">
+      <div class="card-body">
+        <p class="card-title">Do the cards match?</p>      
+        <button class="yes btn btn-primary">Yes</button>
+        <div class="divider"></div>
+        <button class="no btn btn-primary">No</button>
+      </div>
+    </div>
+    
     <section class="player-score scaled">
       <div class="d-flex bd-highlight justify-content-center">
         <div class="p-1 flex-fill bd-highlight">
@@ -23,23 +32,13 @@
         </div>
         <div class="p-1 flex-fill bd-highlight">
           <p class="alert alert-secondary text-center" id="playerTurnDisplay">Player 1's Turn</p>
-        
-          
-        
-          <div id="prompt" style="position: absolute; z-index:1000;" class="card text-center invisible">
-            <div class="card-body">
-              <p class="card-title">Do the cards match?</p>      
-              <button class="yes btn btn-primary">Yes</button>
-              <div class="divider"></div>
-              <button class="no btn btn-primary">No</button>
-            </div>
-          </div>
         </div>
         <div class="p-1 flex-fill bd-highlight">
           <p class="alert alert-secondary text-center" id="playerTwoScoreDisplay">Player 2 Score: 0</p>
         </div>
       </div>      
-    </section>    
+    </section>   
+     
     <section id="gameGrid" class="memory-game">
   
 
@@ -121,6 +120,7 @@
   
   
   </section>
+  
 
   
   
