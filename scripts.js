@@ -17,9 +17,9 @@ function flipCard() {
   if (this === firstCard) return;
   
   
-  //if (this.children[0].alt != "") {
-	//talk(this.children[0].alt);  
-  //}
+  if (this.children[0].alt != "") {
+	  talk(this.children[0].alt);  
+  }
   
   this.classList.add('flip');
 
@@ -77,6 +77,7 @@ function checkForMatch() {
 
   if (different) {
 	  prompt.style.visibility = "visible";
+    lockBoard = true;
 	  
   } else {
 	  
@@ -175,8 +176,14 @@ function yes() {
 	let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
 	
 	if (isMatch) {
-		speechPrompt.style.visibility = "visible";
-		recognition.start();		
+		//speechPrompt.style.visibility = "visible";
+		//recognition.start();		
+  
+		increasePlayerScore(5, playerTurn);
+    isMatch ? disableCards() : unflipCards();
+	  changePlayerTurn();
+	
+
 		
 	} else {
 		increasePlayerScore(1, otherPlayer);
@@ -238,58 +245,10 @@ for (i = 0; i < JSON_data.length; i++) {
 }
 
 //Text to Speech
-
-let allVoices;
-
-function init(){
-  if (window.speechSynthesis) {
-    if (speechSynthesis.onvoiceschanged !== undefined) {
-      //Chrome gets the voices asynchronously so this is needed
-      speechSynthesis.onvoiceschanged = setUpVoices;
-    }
-    setUpVoices(); //for all the other browsers
-  }else{
-    speakBtn.disabled = true;
-    speakerMenu.disabled = true;
-    qs("#warning").style.display = "block";
-  }
-}
-
-function setUpVoices(){
-	//actuall just Korean Google Voice
-  allVoices = getAllVoices();
-}
-
-function getAllVoices() {
-  let voicesall = speechSynthesis.getVoices();
-  let vuris = [];
-  let voices = [];
-  voicesall.forEach(function(obj,index){
-    let uri = obj.voiceURI;
-	
-    if (!vuris.includes(uri) && obj.lang == "ko-KR" && obj.voiceURI.includes("Google")){
-      vuris.push(uri);
-      voices.push(obj);
-    }
-  });
-  voices.forEach(function(obj,index){obj.id = index;});
-  return voices;
-}
-
 function talk(text){
-  //let sval = Number(speakerMenu.value); //14 Korean 
-  let u = new SpeechSynthesisUtterance();
-  u.voice = allVoices[0]; //sval
-  u.lang = u.voice.lang;
-  u.text = text //txtFld.value;
-  u.rate = 0.8;
-  speechSynthesis.speak(u);
+  responsiveVoice.speak(text, 'Korean Female');
 }
 
-document.addEventListener('DOMContentLoaded', function (e) {
-  try {init();} catch (error){
-    console.log("Data didn't load", error);}
-});
 
 
 //Speech to Text
