@@ -1,5 +1,14 @@
 //todo: cards should fold into stack off side of table to remove clutter
 
+//Let's check if stt can be complete
+try {
+  webkitSpeechRecognition;
+  var webkitSpeechRecognitionAvailable = true;
+}
+catch(err) {
+  var webkitSpeechRecognitionAvailable = false;
+}
+
 const cards = document.querySelectorAll('.memory-card');
 
 let playerOneScore = 0;
@@ -159,15 +168,16 @@ function yes() {
 	let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
 	
 	if (isMatch) {
-		speechPrompt.classList.remove("invisible");
 
-    var koreanCardWord = firstCard.children[0].alt + secondCard.children[0].alt;
-    speechToText(koreanCardWord);
-  
-		//increasePlayerScore(5, playerTurn);
-    //isMatch ? disableCards() : unflipCards();
-	  //changePlayerTurn();
-
+    if (webkitSpeechRecognitionAvailable) {
+		  speechPrompt.classList.remove("invisible");
+      var koreanCardWord = firstCard.children[0].alt + secondCard.children[0].alt;
+      speechToText(koreanCardWord);
+    } else {
+      increasePlayerScore(5, playerTurn);
+      isMatch ? disableCards() : unflipCards();
+	    changePlayerTurn();
+    }
 		
 	} else {
 		increasePlayerScore(1, otherPlayer);
@@ -220,7 +230,11 @@ for (i = 0; i < JSON_data.length; i++) {
   document.getElementById(String.fromCharCode(97 + i) + "1").alt = JSON_data[i]["korean"];
 
   // convert text message to base64 dataURL
-  var data = textImage.toDataURL(JSON_data[i]["english"]);
+
+  var englishWord = JSON_data[i]["english"];
+  englishWord = englishWord.replace(/,\s/, ',\n');
+
+  var data = textImage.toDataURL(englishWord);
   document.getElementById(String.fromCharCode(97 + i) + "2").src = data;
 
 }
@@ -238,15 +252,18 @@ function talk(text){
 
 
 //Speech to Text
-var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
-var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
-var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
+
+if (webkitSpeechRecognitionAvailable) {
+  var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+  var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
+  var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
 
 
-var phrasePara = document.querySelector('.phrase');
-var resultPara = document.querySelector('.result');
-var diagnosticPara = document.querySelector('.output');
+  var phrasePara = document.querySelector('.phrase');
+  var resultPara = document.querySelector('.result');
+  var diagnosticPara = document.querySelector('.output');
 
+}
 
 
 function speechToText(phrase) {
@@ -290,8 +307,16 @@ function speechToText(phrase) {
 	  speechResults.push(word);
 	}
 	console.log(speechResults);
+
+    var matchArray = findBestMatch(phrase, speechResults);
+    console.log('match');
+    console.log(matchArray);
+    console.log(matchArray["_text"]);
+    console.log(matchArray["similarity"]);
+
+    diagnosticPara.textContent = 'Speech received: ' + matchArray["_text"] + '.';
 	
-    if(speechResults.includes(phrase)) {
+    if(matchArray["similarity"] >= 0.6) {
       resultPara.textContent = 'I heard the correct phrase!';
       resultPara.style.background = 'lime';
     } else {
