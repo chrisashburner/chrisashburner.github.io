@@ -12,15 +12,11 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
-
+randomNumber = 0;
 
 function koreanwordNumber(number) {
 
-  var shipInt  = 10;
-  var baekInt  = 100;
-  var choenInt = 1000;
-  var manInt   = 10000;
-
+  
   Number.prototype.format = function(){
     
     var numberWordIndex = ["공", "일", "이", "삼", "사", "오", "육", "칠", "팔", "구"];
@@ -66,7 +62,12 @@ function testSpeech() {
 
   //var phrase = phrases[randomPhrase()];
 
-  var randomNumber = getRandomInt(999) + 1;
+  
+
+  if (phrasePara.textContent != randomNumber) {
+    randomNumber = getRandomInt(999) + 1;
+  }
+
   var phrase = koreanwordNumber(randomNumber);
 
   // To ensure case consistency while checking with the returned output text
@@ -109,6 +110,7 @@ function testSpeech() {
 	console.log(speechResults);
 	
     if(speechResults.includes(phrase) || speechResults.includes(randomNumber.toString())/*speechResult === phrase*/) {
+      phrasePara.textContent = "";
       resultPara.textContent = 'I heard the correct phrase!';
       resultPara.style.background = 'lime';
     } else {
