@@ -231,11 +231,18 @@ for (i = 0; i < JSON_data.length; i++) {
 
   // convert text message to base64 dataURL
 
-  var englishWord = JSON_data[i]["english"];
-  englishWord = englishWord.replace(/,\s/, ',\n');
+  if (JSON_data[i]["image"] == "") {
+    var englishWord = JSON_data[i]["english"];
+    englishWord = englishWord.replace(/,\s/, ',\n');
 
-  var data = textImage.toDataURL(englishWord);
-  document.getElementById(String.fromCharCode(97 + i) + "2").src = data;
+    var data = textImage.toDataURL(englishWord);
+    document.getElementById(String.fromCharCode(97 + i) + "2").src = data;
+  } else
+
+  {
+    document.getElementById(String.fromCharCode(97 + i) + "2").src = JSON_data[i]["image"];
+  }
+  
 
 }
 
