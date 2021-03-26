@@ -5,7 +5,7 @@
 {"korean" : "korean" ", "english" : "먹다", "english" ", "english" : "to eat"},\
 {"korean" : "korean" ", "english" : "만나다", "english" ", "english" : "to meet"}]";*/
 
-JSON_String = '[\
+JSON_String_Time = '[\
     {"korean" : "오전 일곱시  사분" , "english" : "7:04 AM"},\
     {"korean" : "오전 두시 반" , "english" : "2:30 AM"},\
     {"korean" : "오전 두시 반" , "english" : "2:30 AM"},\
@@ -117,7 +117,7 @@ JSON_String = '[\
     {"korean" : "오전 다섯시 사십일분" , "english" : "5:41 AM"}]';
 
 
-JSON_String_Verbs = '[\
+    JSON_String = '[\
   {"korean" : "오다", 		"english" : "to come"},\
   {"korean" : "마시다", 		"english" : "to drink"},\
   {"korean" : "먹다", 		"english" : "to eat"},\
