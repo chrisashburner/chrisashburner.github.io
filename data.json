@@ -222,17 +222,17 @@ JSON_String_Time = '[\
 
 
       JSON_String = '[\
-        {"korean" : "가격",      "image" : "./img/Price.jpg", 		"english" : "Price"},\
-        {"korean" : "가구",      "image" : "./img/Furniture.jpg",        "english" : "Furniture"},\ 
-        {"korean" : "가방",      "image" : "./img/Bag.jpg",        "english" : "Bag"},\ 
-        {"korean" : "가을",      "image" : "./img/Autumn.jpg",        "english" : "Autumn"},\ 
-        {"korean" : "가족",      "image" : "./img/Family.jpg",        "english" : "Family"},\ 
-        {"korean" : "값",      "image" : "./img/Value.jpg",         "english" : "Value"},\ 
-        {"korean" : "강",      "image" : "./img/River.jpg",         "english" : "River"},\ 
-        {"korean" : "거리",      "image" : "./img/Street.jpg",        "english" : "Street"},\ 
-        {"korean" : "걱정",      "image" : "./img/Worry.jpg",        "english" : "Worry"},\ 
-        {"korean" : "결혼식",      "image" : "./img/Wedding Ceremony.jpg",       "english" : "Wedding Ceremony"},\ 
+        {"korean" : "가격",      "image" : "https://chrisashburner.github.io/img/Price.jpg", 		"english" : "Price"},\
+        {"korean" : "가구",      "image" : "https://chrisashburner.github.io/img/Furniture.jpg",        "english" : "Furniture"},\ 
+        {"korean" : "가방",      "image" : "https://chrisashburner.github.io/img/Bag.jpg",        "english" : "Bag"},\ 
+        {"korean" : "가을",      "image" : "https://chrisashburner.github.io/img/Autumn.jpg",        "english" : "Autumn"},\ 
+        {"korean" : "가족",      "image" : "https://chrisashburner.github.io/img/Family.jpg",        "english" : "Family"},\ 
+        {"korean" : "값",      "image" : "https://chrisashburner.github.io/img/Value.jpg",         "english" : "Value"},\ 
+        {"korean" : "강",      "image" : "https://chrisashburner.github.io/img/River.jpg",         "english" : "River"},\ 
+        {"korean" : "거리",      "image" : "https://chrisashburner.github.io/img/Street.jpg",        "english" : "Street"},\ 
+        {"korean" : "걱정",      "image" : "https://chrisashburner.github.io/img/Worry.jpg",        "english" : "Worry"},\ 
+        {"korean" : "결혼식",      "image" : "https://chrisashburner.github.io/img/Wedding Ceremony.jpg",       "english" : "Wedding Ceremony"},\ 
         {"korean" : "경주",      "image" : "",        "english" : "Gyeongju"},\ 
         {"korean" : "경험",      "image" : "",        "english" : "Experience"},\ 
-        {"korean" : "계절",      "image" : "./img/Season.jpg",        "english" : "Season"}]';
+        {"korean" : "계절",      "image" : "https://chrisashburner.github.io/img/Season.jpg",        "english" : "Season"}]';
 
