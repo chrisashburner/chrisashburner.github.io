@@ -1,5 +1,5 @@
-/*Copyright (c) [2018], [Jaeyoung Lee]*/
-/*From https://github.com/jaeleeps/kor-string-similarity*/
+
+/*based on [2018], [Jaeyoung Lee] https://github.com/jaeleeps/kor-string-similarity*/
 
 var rCho =
         [ "ㄱ", "ㄲ", "ㄴ", "ㄷ", "ㄸ", "ㄹ", "ㅁ", "ㅂ", "ㅃ", "ㅅ", "ㅆ", "ㅇ", "ㅈ", "ㅉ",
@@ -12,21 +12,31 @@ var rJong =
             "ㄿ", "ㅀ", "ㅁ", "ㅂ", "ㅄ", "ㅅ", "ㅆ", "ㅇ", "ㅈ", "ㅊ", "ㅋ", "ㅌ",
             "ㅍ", "ㅎ" ];
 
-var replaceAll = function (strTemp, strValue1, strValue2){
+//the plan is the use a Phonetic Representative for each letter, this will allow a lower match tolerance but still keep the game functional
+//this is complicated since 받침 pronunciation rules change based on the next word
+//Mmm maybe we can use a phonetic similarity matrix (for vowels?) so an edit doesn't get a score of 1 everytime but less than 1 depending on the sounds?
+//I will use the combinations described here https://koreanjun.com/hangul-pronunciation/batchim/
+
+var rChoPhoneticRep =
+        [ "ㄱ", "ㄱ", "ㄴ", "ㄷ", "ㄷ", "ㄹ", "ㅁ", "ㅂ", "ㅂ", "ㅅ", "ㅅ", "ㅇ", "ㅈ", "ㅈ",
+            "ㅈ", "ㄱ", "ㄷ", "ㅂ", "ㅎ" ];
+
+
+/*var replaceAll = function (strTemp, strValue1, strValue2){
   while(1){
     if( strTemp.indexOf(strValue1) != -1 ) strTemp = strTemp.replace(strValue1, strValue2);
     else break;
   }
   return strTemp;
-}
+}*/
 
-var korToUni = function(str) {
+/*var korToUni = function(str) {
   return escape(replaceAll(str, "\\", "%"));
 }
 
 var uniToKor = function(str) {
   return unescape(replaceAll(str, "\\", "%"));
-}
+}*/
 
 var handleSyllables = function(str) {
   var cho, jung, jong;
@@ -35,7 +45,7 @@ var handleSyllables = function(str) {
   jong = tempStr % 28; // ??
   jung = ((tempStr - jong) / 28 ) % 21;  // ??
   cho = (((tempStr - jong) / 28 ) - jung ) / 21; // ??
-  // console.log("??:" + rCho[cho] + " ??:" + rJung[jung] + " ??:" + rJong[jong]);
+  console.log("??:" + rCho[cho] + " ??:" + rJung[jung] + " ??:" + rJong[jong]);
   (rCho[cho] != (null||undefined||"")) ? arr.push(rCho[cho]) : arr.push("empt");
   (rJung[jung] != (null||undefined||"")) ? arr.push(rJung[jung]) : arr.push("empt");
   (rJong[jong] != (null||undefined||"")) ? arr.push(rJong[jong]) : arr.push("empt");
@@ -62,7 +72,7 @@ var strSeparator = function(str) {
   return arr;
 }
 
-var getStrArr = function(str) {
+/*var getStrArr = function(str) {
   var arr = strSeparator(str);
   var resultarr = [];
   var index = -1, length = arr.length;
@@ -77,7 +87,7 @@ var getStrArr = function(str) {
     resultarr.push(""+arr[index]+arr[index+1]);
   }
   return resultarr;
-}
+}*/
 
 function diceCoefficient(target, compared) {
   var left = strSeparator(String(target).toLowerCase());
