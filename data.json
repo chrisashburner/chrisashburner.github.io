@@ -264,10 +264,20 @@ JSON_String='[{"korean":"가격","image":"https://chrisashburner.github.io/img/P
 {"korean":"날씨","image":"https://chrisashburner.github.io/img/Weather.jpg","english":"Weather"},\
 {"korean":"남산","image":"","english":"South Mountain"},\
 {"korean":"내년","image":"","english":"Next Year"},\
-/*{"korean":"내용","image":"https://chrisashburner.github.io/img/","english":"Contents"},\
-{"korean":"내일","image":"https://chrisashburner.github.io/img/","english":"Tomorrow"},\
-{"korean":"냉면","image":"https://chrisashburner.github.io/img/","english":"Cold Noodles"},\*/
+{"korean":"도서관","image":"https://chrisashburner.github.io/img/Library.jpg","english":"Library"},\
+{"korean":"라디오","image":"https://chrisashburner.github.io/img/Radio/jpg","english":"Radio"},\
+{"korean":"모자","image":"https://chrisashburner.github.io/img/Hat.jpg","english":"Hat"},\
+{"korean":"바지","image":"https://chrisashburner.github.io/img/Pants.jpg","english":"Pants"},\
 {"korean":"냉장고","image":"https://chrisashburner.github.io/img/Refrigerator.jpg","english":"Refrigerator"},\
+{"korean":"병원","image":"https://chrisashburner.github.io/img/Hospital.jpg","english":"Hospital"},\
+{"korean":"비행기","image":"https://chrisashburner.github.io/img/Airplane.jpg","english":"Airplane"},\
+{"korean":"빵","image":"https://chrisashburner.github.io/img/Bread.jpg","english":"Bread"},\
+{"korean":"사과","image":"https://chrisashburner.github.io/img/Apple.jpg","english":"Apple"},\
+{"korean":"자동차","image":"https://chrisashburner.github.io/img/Car.jpg","english":"Car"},\
+{"korean":"자전거","image":"https://chrisashburner.github.io/img/Bicycle.jpg","english":"Bicycle"},\
+{"korean":"경주","image":"https://chrisashburner.github.io/img/","english":"Gyeongju"}]';
+
+
 /*{"korean":"년","image":"https://chrisashburner.github.io/img/","english":"Year"},\
 {"korean":"노래","image":"https://chrisashburner.github.io/img/","english":"Song"},\
 {"korean":"누나","image":"https://chrisashburner.github.io/img/","english":"Sister"},\
@@ -278,7 +288,7 @@ JSON_String='[{"korean":"가격","image":"https://chrisashburner.github.io/img/P
 {"korean":"단어","image":"https://chrisashburner.github.io/img/","english":"Word"},\
 {"korean":"달","image":"https://chrisashburner.github.io/img/","english":"Month"},\
 {"korean":"댁","image":"https://chrisashburner.github.io/img/","english":"House"},\*/
-{"korean":"도서관","image":"https://chrisashburner.github.io/img/Library.jpg","english":"Library"},\
+
 /*{"korean":"돈","image":"https://chrisashburner.github.io/img/","english":"Money"},\
 {"korean":"동대문","image":"https://chrisashburner.github.io/img/","english":"Dong Dae Moon"},\
 {"korean":"동생","image":"https://chrisashburner.github.io/img/","english":"Brother"},\
@@ -286,12 +296,12 @@ JSON_String='[{"korean":"가격","image":"https://chrisashburner.github.io/img/P
 {"korean":"드라마","image":"https://chrisashburner.github.io/img/","english":"Drama"},\
 {"korean":"등산","image":"https://chrisashburner.github.io/img/","english":"Mountain Climbing"},\
 {"korean":"등산화","image":"https://chrisashburner.github.io/img/","english":"Hiking Boots"},\*/
-{"korean":"라디오","image":"https://chrisashburner.github.io/img/Radio/jpg","english":"Radio"},\
+
 /*{"korean":"러시아","image":"https://chrisashburner.github.io/img/","english":"Russia"},\
 {"korean":"맞은편","image":"https://chrisashburner.github.io/img/","english":"Across"},\
 {"korean":"머리","image":"https://chrisashburner.github.io/img/","english":"Head"},\
 {"korean":"모습","image":"https://chrisashburner.github.io/img/","english":"Shape"},\*/
-{"korean":"모자","image":"https://chrisashburner.github.io/img/Hat.jpg","english":"Hat"},\
+
 /*{"korean":"무게","image":"https://chrisashburner.github.io/img/","english":"Weight"},\
 {"korean":"문","image":"https://chrisashburner.github.io/img/","english":"Door"},\
 {"korean":"문구점","image":"https://chrisashburner.github.io/img/","english":"Stationery"},\
@@ -300,7 +310,7 @@ JSON_String='[{"korean":"가격","image":"https://chrisashburner.github.io/img/P
 {"korean":"물건","image":"https://chrisashburner.github.io/img/","english":"Stuff"},\
 {"korean":"미국","image":"https://chrisashburner.github.io/img/","english":"United States Of America"},\
 {"korean":"밑","image":"https://chrisashburner.github.io/img/","english":"Bottom"},\*/
-{"korean":"바지","image":"https://chrisashburner.github.io/img/Pants.jpg","english":"Pants"},\
+
 /*{"korean":"박물관","image":"https://chrisashburner.github.io/img/","english":"Museum"},\
 {"korean":"밖","image":"https://chrisashburner.github.io/img/","english":"Outside"},\
 {"korean":"반(수업)","image":"https://chrisashburner.github.io/img/","english":"Class (Class)"},\
@@ -313,7 +323,7 @@ JSON_String='[{"korean":"가격","image":"https://chrisashburner.github.io/img/P
 {"korean":"백화점","image":"https://chrisashburner.github.io/img/","english":"Department Store"},\
 {"korean":"버스","image":"https://chrisashburner.github.io/img/","english":"Bus"},\
 {"korean":"번호","image":"https://chrisashburner.github.io/img/","english":"Number"},\*/
-{"korean":"병원","image":"https://chrisashburner.github.io/img/Hospital.jpg","english":"Hospital"},\
+
 /*{"korean":"볼펜","image":"https://chrisashburner.github.io/img/","english":"Pen"},\
 {"korean":"봄","image":"https://chrisashburner.github.io/img/","english":"Spring"},\
 {"korean":"부모","image":"https://chrisashburner.github.io/img/","english":"Parents"},\
@@ -323,9 +333,15 @@ JSON_String='[{"korean":"가격","image":"https://chrisashburner.github.io/img/P
 {"korean":"분위기","image":"https://chrisashburner.github.io/img/","english":"Atmosphere"},\
 {"korean":"불고기","image":"https://chrisashburner.github.io/img/","english":"Bulgogi"},\
 {"korean":"비","image":"https://chrisashburner.github.io/img/","english":"Ratio"},\*/
-{"korean":"비행기","image":"https://chrisashburner.github.io/img/Airplane.jpg","english":"Airplane"},\
-{"korean":"빵","image":"https://chrisashburner.github.io/img/Bread.jpg","english":"Bread"},\
-{"korean":"사과","image":"https://chrisashburner.github.io/img/Apple.jpg","english":"Apple"},\
+
+/*{"korean":"자리","image":"https://chrisashburner.github.io/img/","english":"Seat"},\*/
+
+
+
+/*{"korean":"내용","image":"https://chrisashburner.github.io/img/","english":"Contents"},\
+{"korean":"내일","image":"https://chrisashburner.github.io/img/","english":"Tomorrow"},\
+{"korean":"냉면","image":"https://chrisashburner.github.io/img/","english":"Cold Noodles"},\*/
+
 /*{"korean":"사람","image":"https://chrisashburner.github.io/img/","english":"Person"},\
 {"korean":"사무실","image":"https://chrisashburner.github.io/img/","english":"Office"},\
 {"korean":"사은품","image":"https://chrisashburner.github.io/img/","english":"Gifts"},\
@@ -419,9 +435,7 @@ JSON_String='[{"korean":"가격","image":"https://chrisashburner.github.io/img/P
 {"korean":"일본","image":"https://chrisashburner.github.io/img/","english":"Japan"},\
 {"korean":"일본어","image":"https://chrisashburner.github.io/img/","english":"Japanese"},\
 {"korean":"일요일","image":"https://chrisashburner.github.io/img/","english":"Sunday"},\*/
-{"korean":"자동차","image":"https://chrisashburner.github.io/img/Car.jpg","english":"Car"},\
-/*{"korean":"자리","image":"https://chrisashburner.github.io/img/","english":"Seat"},\*/
-{"korean":"자전거","image":"https://chrisashburner.github.io/img/Bicycle.jpg","english":"Bicycle"},\
+
 /*{"korean":"작년","image":"https://chrisashburner.github.io/img/","english":"Last Year"},\
 {"korean":"잡지","image":"https://chrisashburner.github.io/img/","english":"Magazine"},\
 {"korean":"장소","image":"https://chrisashburner.github.io/img/","english":"Place"},\
@@ -492,4 +506,3 @@ JSON_String='[{"korean":"가격","image":"https://chrisashburner.github.io/img/P
 {"korean":"휴일","image":"https://chrisashburner.github.io/img/","english":"Holiday"},\
 {"korean":"희망","image":"https://chrisashburner.github.io/img/","english":"Hope"},\
 {"korean":"힘","image":"https://chrisashburner.github.io/img/","english":"Power"},\*/
-{"korean":"경주","image":"https://chrisashburner.github.io/img/","english":"Gyeongju"}]';
