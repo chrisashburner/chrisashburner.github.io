@@ -266,7 +266,7 @@ JSON_String='[{"korean":"가격","image":"https://chrisashburner.github.io/img/P
 {"korean":"내년","image":"","english":"Next Year"},\
 {"korean":"도서관","image":"https://chrisashburner.github.io/img/Library.jpg","english":"Library"},\
 {"korean":"라디오","image":"https://chrisashburner.github.io/img/Radio/jpg","english":"Radio"},\
-{"korean":"모자","image":"https://chrisashburner.github.io/img/Hat.jpg","english":"Hat"},\
+{"korean":"모자","image":"https://chrisashburner.github.io/img/hat.jpg","english":"Hat"},\
 {"korean":"바지","image":"https://chrisashburner.github.io/img/Pants.jpg","english":"Pants"},\
 {"korean":"냉장고","image":"https://chrisashburner.github.io/img/Refrigerator.jpg","english":"Refrigerator"},\
 {"korean":"병원","image":"https://chrisashburner.github.io/img/Hospital.jpg","english":"Hospital"},\
