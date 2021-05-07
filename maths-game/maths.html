@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Circular countdown timer using HTML, CSS or JavaScript (and a little jquery)</title> 
+  <style>              
+
+html {
+  height: 100%;
+  background-color: rgb(89, 118, 151);
+}
+    .item {
+      position: relative;
+    } 
+
+    .item h2 {
+      text-align:center;
+      position: absolute;
+      line-height: 125px;
+      width: 100%;
+    }
+
+    svg {
+      transform: rotate(-90deg);
+      display: block;
+      margin: auto;
+    }
+
+    .circle_animation {
+      stroke-dasharray: 440; /* this value is the pixel circumference of the circle */
+      stroke-dashoffset: 0;
+      transition: all 1s linear;
+    }
+
+    .btn-group button {
+      background-color: #04AA6D; /* Green background */
+      border: 1px solid green; /* Green border */
+      color: white; /* White text */
+      padding: 10px 24px; /* Some padding */
+      cursor: pointer; /* Pointer/hand icon */
+      width: 20%; /* Set a width if needed */
+      display: block; /* Make the buttons appear below each other */
+      margin: auto;
+    }
+
+    .btn-group button:not(:last-child) {
+      border-bottom: none; /* Prevent double borders */
+    } 
+
+    /* Add a background color on hover */
+    .btn-group button:hover {
+      background-color: #3e8e41;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="item">
+    <h2>Start!</h2>
+    <svg width="160" height="160" xmlns="http://www.w3.org/2000/svg">
+      <circle id="circle" class="circle_animation" r="69.85699" cy="81" cx="81" stroke-width="8" stroke="#6fdb6f" fill="none"/>
+    </svg>          
+  </div>
+  <br/>
+  <div class="btn-group">
+    <button id="button1" onclick="checkAnswer(1, correctOption);"></button>
+    <button id="button2" onclick="checkAnswer(2, correctOption);"></button>
+    <button id="button3" onclick="checkAnswer(3, correctOption);"></button>
+    <button id="button4" onclick="checkAnswer(4, correctOption);"></button>
+  </div>
+
+  <p id="answer"></p>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  <script>
+
+    function koreanwordNumber(number) {
+      
+    Number.prototype.format = function(){
+      
+      var numberWordIndex = ["공", "일", "이", "삼", "사", "오", "육", "칠", "팔", "구"];
+
+      var numberIndex = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];    
+      
+      var man = this.toString().replace(/(\d)(?=(\d{4})+(?!\d))/g, "$1만");
+      var choen = man.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1천");
+      var beak = choen.toString().replace(/(\d)(?=(\d{2})+(?!\d))/g, "$1백");
+      var ship = beak.toString().replace(/(\d)(?=(\d{1})+(?!\d))/g, "$1십");
+
+      //console.log(ship);
+      
+      var wordNumbers = ship.toString();
+      var i;
+      for (i = 0; i < wordNumbers.length; i++) {
+        var number = wordNumbers.substring(i, i+1);
+
+        if (numberIndex.includes(number)) {
+          var wordNumbers = wordNumbers.toString().replace(number, numberWordIndex[number]);
+        };
+      }
+
+      var wordNumbers = wordNumbers.toString().replace(/일(만|천|백|십)/g, "$1");
+      var wordNumbers = wordNumbers.toString().replace(/공(만|천|백|십)/g, "");
+      var wordNumbers = wordNumbers.toString().replace("공", "");
+
+      return wordNumbers;
+    };
+
+    numberWord = number.format();
+
+    console.log(numberWord);
+    return numberWord;
+    }
+
+    function checkAnswer(item, correctOption) {
+      if (item==correctOption) {
+        i=0;
+        document.getElementById("answer").innerHTML = "Correct!";
+      }
+      else {
+        document.getElementById("answer").innerHTML = "Incorrect!";
+      }
+    }
+
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * max);
+    } 
+
+    function makeOption(option, correctOption, answer) {
+      var max = Math.floor(answer / 3);
+      var plusOrMinus = Math.random() < 0.5 ? -1 : 1;
+      var getRandomInt = Math.max(1, Math.floor(Math.random() * max)) + option;
+      var randomOption = Math.max(Math.floor(answer/2), answer + getRandomInt * plusOrMinus);
+
+      if (option==correctOption) {return answer;}
+      else {return randomOption;}
+
+    }   
+
+    var time = 10;
+    var initialOffset = '0';
+    var tickSize = '440';
+    var i = 10; 
+
+    var x = Math.max(1, getRandomInt(10));
+    var y = Math.max(1, getRandomInt(10));
+    var question = koreanwordNumber(x) + ' + ' + koreanwordNumber(y) + ' = ';
+    var answer = x + y; 
+
+    var correctOption = Math.max(1, getRandomInt(4)); 
+
+    var option1 = makeOption(1, correctOption, answer);
+    var option2 = makeOption(2, correctOption, answer);
+    var option3 = makeOption(3, correctOption, answer);
+    var option4 = makeOption(4, correctOption, answer); 
+
+    $('h2').text(question); 
+
+    $('#button1').text(koreanwordNumber(option1));
+    $('#button2').text(koreanwordNumber(option2));
+    $('#button3').text(koreanwordNumber(option3));
+    $('#button4').text(koreanwordNumber(option4)); 
+
+    var interval = setInterval(function() {
+      $('h2').text(question);
+      if (i == 0) {
+        i = 11;
+        x = Math.max(1, getRandomInt(10));
+        y = Math.max(1, getRandomInt(10));
+        question = koreanwordNumber(x) + ' + ' + koreanwordNumber(y) + ' = ';
+        answer = x + y;
+
+        correctOption = Math.max(1, getRandomInt(4)); 
+
+        option1 = makeOption(1, correctOption, answer);
+        option2 = makeOption(2, correctOption, answer);
+        option3 = makeOption(3, correctOption, answer);
+        option4 = makeOption(4, correctOption, answer);
+
+        $('h2').text("Start!");
+
+        $('#button1').text(koreanwordNumber(option1));
+        $('#button2').text(koreanwordNumber(option2));
+        $('#button3').text(koreanwordNumber(option3));
+        $('#button4').text(koreanwordNumber(option4));                                          
+
+        question = "Start!"
+        $('#answer').text("");                 
+
+        return;
+      }
+
+        question = koreanwordNumber(x) + ' + ' + koreanwordNumber(y) + ' = ';
+        $('.circle_animation').css('stroke-dashoffset', tickSize-((i-1)*(tickSize/time)));
+        i--;
+    }, 1000);
+
+  </script>
+</body>
+</html>
