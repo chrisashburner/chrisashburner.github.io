@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Circular countdown timer using HTML, CSS or JavaScript (and a little jquery)</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maths Game</title> 
   <style>              
 
 html {
@@ -48,15 +49,22 @@ html {
     } 
 
     /* Add a background color on hover */
-    .btn-group button:hover {
-      background-color: #3e8e41;
+    @media (hover: hover) {
+      .btn-group button:hover {
+        background-color: #3e8e41;
+      }
+    }
+
+    .invisible {
+      visibility: hidden;
+      height: 0px;
     }
 
   </style>
 </head>
 <body>
   <div class="item">
-    <h2>Start!</h2>
+    <h2 id="question">Start!</h2>
     <svg width="160" height="160" xmlns="http://www.w3.org/2000/svg">
       <circle id="circle" class="circle_animation" r="69.85699" cy="81" cx="81" stroke-width="8" stroke="#6fdb6f" fill="none"/>
     </svg>          
@@ -67,9 +75,10 @@ html {
     <button id="button2" onclick="checkAnswer(2, correctOption);"></button>
     <button id="button3" onclick="checkAnswer(3, correctOption);"></button>
     <button id="button4" onclick="checkAnswer(4, correctOption);"></button>
+    <p id="answer" class="invisible"></p>
   </div>
 
-  <p id="answer"></p>
+  
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
   <script>
@@ -108,7 +117,7 @@ html {
 
     numberWord = number.format();
 
-    console.log(numberWord);
+    //console.log(numberWord);
     return numberWord;
     }
 
@@ -116,9 +125,11 @@ html {
       if (item==correctOption) {
         i=0;
         document.getElementById("answer").innerHTML = "Correct!";
+        $('h2').text("Correct!");
       }
       else {
         document.getElementById("answer").innerHTML = "Incorrect!";
+        $('h2').text("Incorrect!");
       }
     }
 
@@ -154,15 +165,17 @@ html {
     var option3 = makeOption(3, correctOption, answer);
     var option4 = makeOption(4, correctOption, answer); 
 
-    $('h2').text(question); 
+    $('h2').text(question);
+    
+      
 
     $('#button1').text(koreanwordNumber(option1));
     $('#button2').text(koreanwordNumber(option2));
     $('#button3').text(koreanwordNumber(option3));
     $('#button4').text(koreanwordNumber(option4)); 
 
-    var interval = setInterval(function() {
-      $('h2').text(question);
+    var interval = setInterval(function() {    
+
       if (i == 0) {
         i = 11;
         x = Math.max(1, getRandomInt(10));
@@ -177,22 +190,31 @@ html {
         option3 = makeOption(3, correctOption, answer);
         option4 = makeOption(4, correctOption, answer);
 
-        $('h2').text("Start!");
+        //$('h2').text("Start!");
 
         $('#button1').text(koreanwordNumber(option1));
         $('#button2').text(koreanwordNumber(option2));
         $('#button3').text(koreanwordNumber(option3));
         $('#button4').text(koreanwordNumber(option4));                                          
 
-        question = "Start!"
-        $('#answer').text("");                 
+        if (document.getElementById("answer").innerHTML == "Correct!") {
+          question = "Correct!"
+        }
+        else {
+          question = "Time's Up!" 
+        }
+        
+        $('#answer').text("");
 
         return;
       }
 
-        question = koreanwordNumber(x) + ' + ' + koreanwordNumber(y) + ' = ';
-        $('.circle_animation').css('stroke-dashoffset', tickSize-((i-1)*(tickSize/time)));
-        i--;
+      $('h2').text(question);
+
+      question = koreanwordNumber(x) + ' + ' + koreanwordNumber(y) + ' = ';
+
+      $('.circle_animation').css('stroke-dashoffset', tickSize-((i-1)*(tickSize/time)));
+      i--;
     }, 1000);
 
   </script>
