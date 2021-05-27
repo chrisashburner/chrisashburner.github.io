@@ -221,106 +221,105 @@ JSON_String_verbs='[\
     {"korean":"사랑에빠지다","image":"","english":"to fall in love"}]';
 
 JSON_String='[\
-{"korean":"오다","image":"","english":"to come"},\
-{"korean":"마시다","image":"","english":"to drink"},\
-{"korean":"먹다","image":"","english":"to eat"},\
-{"korean":"주다","image":"","english":"to give"},\
-{"korean":"가다","image":"","english":"to go"},\
-{"korean":"듣다","image":"","english":"to hear"},\
-{"korean":"배우다","image":"","english":"to learn"},\
-{"korean":"만들다","image":"","english":"to make"},\
-{"korean":"앉다","image":"","english":"to sit"},\
-{"korean":"자다","image":"","english":"to sleep"},\
-{"korean":"씻다","image":"","english":"to wash"},\
-{"korean":"쓰다","image":"","english":"to write"},\
-{"korean":"울다","image":"","english":"to cry"},\
-{"korean":"갖다","image":"","english":"to have"},\
-{"korean":"웃다","image":"","english":"to laugh"},\
-{"korean":"보다","image":"","english":"to see"},\
-{"korean":"일어나다","image":"","english":"to get up"},\
-{"korean":"걷다","image":"","english":"to walk"},\
-{"korean":"춤추다","image":"","english":"to dance"},\
-{"korean":"만나다","image":"","english":"to meet"},\
-{"korean":"공부하다","image":"","english":"to study"},\
-{"korean":"운전하다","image":"","english":"to drive"},\
-{"korean":"사다","image":"","english":"to buy"},\
-{"korean":"읽다","image":"","english":"to read"},\
-{"korean":"주문하다","image":"","english":"to order"},\
-{"korean":"입다","image":"","english":"to wear"},\
-{"korean":"찍다","image":"","english":"to take (picture)"},\
-{"korean":"쓰다","image":"","english":"to wear (hat, eyewear)"},\
-{"korean":"신다","image":"","english":"to wear (shoes, socks, footwear)"},\
-{"korean":"빌리다","image":"","english":"to borrow, lend"},\
-{"korean":"전화하다","image":"","english":"to telephone"},\
-{"korean":"말하다","image":"","english":"to talk, speak"},\
-{"korean":"가르치다","image":"","english":"to teach"},\
-{"korean":"기다리다","image":"","english":"to wait"},\
-{"korean":"걸다","image":"","english":"to call, dial"},\
-{"korean":"청소하다",	"image":"","english":"to clean"},\
-{"korean":"타다","image":"","english":"to ride"},\
-{"korean":"나가다","image":"","english":"to exit"},\
-{"korean":"들어오다","image":"","english":"to enter"},\
-{"korean":"물어보다","image":"","english":"to ask"},\
-{"korean":"필요하다","image":"","english":"to need"},\
-{"korean":"도와주다","image":"","english":"to help"},\
-{"korean":"열다","image":"","english":"to open"},\
-{"korean":"닫다","image":"","english":"to close"},\
-{"korean":"일하다","image":"","english":"to work"},\
-{"korean":"쉬다","image":"","english":"to rest"},\
-{"korean":"운동하다","image":"","english":"to exercise"},\
-{"korean":"생각하다","image":"","english":"to think"},\
-{"korean":"알다","image":"","english":"to know"},\
-{"korean":"모르다","image":"","english":"to not know"},\
-{"korean":"요리하다","image":"","english":"to cook"},\
-{"korean":"끓이다","image":"","english":"to boil"},\
-{"korean":"썰다","image":"","english":"to chop, slice"},\
-{"korean":"튀기다","image":"","english":"to deepfry"},\
-{"korean":"재다","image":"","english":"to measure, weigh"},\
-{"korean":"섞다","image":"","english":"to mix, blend"},\
-{"korean":"굽다","image":"","english":"to roast, grill, bake"},\
-{"korean":"볶다","image":"","english":"to fry"},\
-{"korean":"찌다","image":"","english":"to steam"},\
-{"korean":"휘젓다","image":"","english":"to stir"},\
-{"korean":"하다","image":"","english":"to do"},\
-{"korean":"있다","image":"","english":"to have"},\
-{"korean":"없다","image":"","english":"to not have"},\
-{"korean":"이야기하다","image":"","english":"to talk, chat"},\
-{"korean":"연습하다","image":"","english":"to practice"},\
-{"korean":"묻다","image":"","english":"to ask"},\
-{"korean":"내다","image":"","english":"to pay"},\
-{"korean":"살다","image":"","english":"to live"},\
-{"korean":"죽다","image":"","english":"to die"},\
-{"korean":"태어나다","image":"","english":"to be born"},\
-{"korean":"사랑하다","image":"","english":"to love"},\
-{"korean":"좋아하다","image":"","english":"to like"},\
-{"korean":"싫어하다","image":"","english":"to hate, dislike"},\
-{"korean":"결혼하다","image":"","english":"to marry"},\
-{"korean":"축하하다","image":"","english":"to congratulate"},\
-{"korean":"걱정하다","image":"","english":"to worry"},\
-{"korean":"약속하다","image":"","english":"to promise"},\
-{"korean":"거짓말하다","image":"","english":"to lie"},\
-{"korean":"고백하다","image":"","english":"to confess"},\
-{"korean":"죄송하다","image":"","english":"to be sorry"},\
-{"korean":"찾다","image":"","english":"to find, to look for"},\
-{"korean":"준비하다","image":"","english":"to prepare"},\
-{"korean":"가지다","image":"","english":"to have"},\
-{"korean":"기억하다","image":"","english":"to remember"},\
-{"korean":"꿈꾸다","image":"","english":"to dream"},\
-{"korean":"시작하다","image":"","english":"to start"},\
-{"korean":"끝나다","image":"","english":"to finish"},\
-{"korean":"보내다","image":"","english":"to send"},\
-{"korean":"사용하다","image":"","english":"to use"},\
-{"korean":"팔다","image":"","english":"to sell"},\
-{"korean":"싸우다","image":"","english":"to fight"},\
-{"korean":"대답하다","image":"","english":"to answer"},\
-{"korean":"소개하다","image":"","english":"to introduce"},\
-{"korean":"출발하다","image":"","english":"to depart"},\
-{"korean":"도착하다","image":"","english":"to arrive"},\
-{"korean":"벗다","image":"","english":"to undress, take off clothes"},\
-{"korean":"이기다","image":"","english":"to win, defeat"},\
-{"korean":"지다","image":"","english":"to lose, be defeated"},\
-{"korean":"서두르다"	,"image":"","english":"to hurry, rush"},\
-{"korean":"사랑에빠지다","image":"","english":"to fall in love"}]';
+{"image":"","english":"to go","korean":"가다"},\
+{"image":"","english":"to go to school","korean":"학교에 가다"},\
+{"image":"","english":"to turn on the light","korean":"불을 켜다"},\
+{"image":"","english":"to turn off the light","korean":"불을 끄다"},\
+{"image":"","english":"to come","korean":"오다"},\
+{"image":"","english":"to come home","korean":"집에 오다"},\
+{"image":"","english":"to come here","korean":"여기에 오다"},\
+{"image":"","english":"to play","korean":"놀다"},\
+{"image":"","english":"to play with my friends","korean":"친구들과 놀다"},\
+{"image":"","english":"to eat","korean":"먹다"},\
+{"image":"","english":"to eat Food","korean":"음식을 먹다"},\
+{"image":"","english":"to eat Food in a restaurant","korean":"식당에서 음식을 먹다"},\
+{"image":"","english":"to sleep","korean":"자다"},\
+{"image":"","english":"to sleep late","korean":"늦게 자다"},\
+{"image":"","english":"to run","korean":"뛰다"},\
+{"image":"","english":"to run fast","korean":"빨리 뛰다"},\
+{"image":"","english":"to watch","korean":"보다"},\
+{"image":"","english":"to watch TV","korean":"티비를 보다"},\
+{"image":"","english":"to drink","korean":"마시다"},\
+{"image":"","english":"to drink water","korean":"물을 마시다"},\
+{"image":"","english":"to work","korean":"일하다"},\
+{"image":"","english":"to work hard","korean":"열심히 일하다"},\
+{"image":"","english":"to study","korean":"공부하다"},\
+{"image":"","english":"to study Math","korean":"수학을 공부하다"},\
+{"image":"","english":"to rest","korean":"쉬다"},\
+{"image":"","english":"to rest in the park","korean":"공원에서 쉬다"},\
+{"image":"","english":"to sing","korean":"노래하다"},\
+{"image":"","english":"to sing merrily","korean":"즐겁게 노래하다"},\
+{"image":"","english":"to buy","korean":"사다"},\
+{"image":"","english":"to buy shoes","korean":"신발을 사다"},\
+{"image":"","english":"to make","korean":"만들다"},\
+{"image":"","english":"to make a toy","korean":"장난감을 만들다"},\
+{"image":"","english":"to drive","korean":"운전하다"},\
+{"image":"","english":"to drive a truck","korean":"트럭을 운전하다"},\
+{"image":"","english":"to swim","korean":"수영하다"},\
+{"image":"","english":"to swim in the sea","korean":"바다에서 수영하다"},\
+{"image":"","english":"to sit","korean":"앉다"},\
+{"image":"","english":"to sit on the chair","korean":"의자에 앉다"},\
+{"image":"","english":"to sell","korean":"팔다"},\
+{"image":"","english":"to sell the furniture","korean":"가구를 팔다"},\
+{"image":"","english":"to write a letter","korean":"편지를 쓰다"},\
+{"image":"","english":"to listen","korean":"듣다"},\
+{"image":"","english":"to listen to the music","korean":"음악을 듣다"},\
+{"image":"","english":"to tell","korean":"말하다"},\
+{"image":"","english":"to tell your mum","korean":"엄마에게 말하다"},\
+{"image":"","english":"to teach","korean":"가르치다"},\
+{"image":"","english":"to teach English","korean":"영어를 가르치다"},\
+{"image":"","english":"to cook fish","korean":"생선을 요리하다"},\
+{"image":"","english":"to meet people","korean":"사람들을 만나다"},\
+{"image":"","english":"to give","korean":"주다"},\
+{"image":"","english":"to give a present","korean":"선물을 주다"},\
+{"image":"","english":"to invite","korean":"초대하다"},\
+{"image":"","english":"to invite people","korean":"사람들을 초대하다"},\
+{"image":"","english":"to dance","korean":"춤추다"},\
+{"image":"","english":"to dance in the room","korean":"방안에서 춤추다"},\
+{"image":"","english":"to fight","korean":"싸우다"},\
+{"image":"","english":"to fight in the war","korean":"전쟁에서 싸우다"},\
+{"image":"","english":"to learn","korean":"배우다"},\
+{"image":"","english":"to learn French","korean":"불어를 배우다"},\
+{"image":"","english":"to wait for the train","korean":"기차를 기다리다"},\
+{"image":"","english":"to wait","korean":"기다리다"},\
+{"image":"","english":"to ride","korean":"타다"},\
+{"image":"","english":"to ride a bike","korean":"자전거를 타다"},\
+{"image":"","english":"to receive","korean":"받다"},\
+{"image":"","english":"to receive a letter","korean":"편지를 받다"},\
+{"image":"","english":"to love","korean":"사랑하다"},\
+{"image":"","english":"to love her","korean":"그녀를 사랑하다"},\
+{"image":"","english":"to like","korean":"좋아하다"},\
+{"image":"","english":"to like him","korean":"그를 좋아하다"},\
+{"image":"","english":"to marry","korean":"결혼하다"},\
+{"image":"","english":"to marry her","korean":"그녀와 결혼하다"},\
+{"image":"","english":"to stand","korean":"일어나다"},\
+{"image":"","english":"to stand quietly","korean":"조용히 일어나다"},\
+{"image":"","english":"to understand","korean":"이해하다"},\
+{"image":"","english":"to understand it","korean":"그것을 이해하다"},\
+{"image":"","english":"to know","korean":"알다"},\
+{"image":"","english":"to know the answer","korean":"답을 알다"},\
+{"image":"","english":"to push","korean":"밀다"},\
+{"image":"","english":"to push the door","korean":"문을 밀다"},\
+{"image":"","english":"to pull the handle","korean":"손잡이를 당기다"},\
+{"image":"","english":"to pull","korean":"당기다"},\
+{"image":"","english":"to open","korean":"열다"},\
+{"image":"","english":"to open the door","korean":"문을 열다"},\
+{"image":"","english":"to close","korean":"닫다"},\
+{"image":"","english":"to close the window","korean":"창문을 닫다"},\
+{"image":"","english":"to lock","korean":"잠그다"},\
+{"image":"","english":"to lock the door","korean":"문을 잠그다"},\
+{"image":"","english":"to read","korean":"읽다"},\
+{"image":"","english":"to read a book","korean":"책을 읽다"},\
+{"image":"","english":"to look for","korean":"찾다"},\
+{"image":"","english":"to look for the key","korean":"열쇠를 찾다"},\
+{"image":"","english":"to cry","korean":"울다"},\
+{"image":"","english":"to cry alone","korean":"혼자 울다"},\
+{"image":"","english":"to greet","korean":"인사하다"},\
+{"image":"","english":"to greet the teacher","korean":"선생님께 인사하다"},\
+{"image":"","english":"to fly","korean":"날다"},\
+{"image":"","english":"to fly like a bird","korean":"새 처럼 날다"},\
+{"image":"","english":"to walk","korean":"걷다"},\
+{"image":"","english":"to walk alone","korean":"혼자 걷다"}]';
 
 
 
