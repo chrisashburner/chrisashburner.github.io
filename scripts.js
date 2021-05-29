@@ -59,10 +59,13 @@ function changePlayerTurn() {
 		document.getElementById("playerTurnDisplay").innerHTML = "Player " + playerTurn + "'s Turn";
     document.getElementById("playerTurnDisplay1").innerHTML = "Player " + playerTurn + "'s Turn";
 
-    const element = document.querySelector('#playerTurnDisplay1');
-    element.classList.add('animate__animated', 'animate__bounceOutLeft');
+    element = document.getElementById("playerTurnDisplay1");
+    element.classList.remove("animate__zoomIn");
+    void element.offsetWidth;
+    element.classList.add("animate__zoomIn");
 
 	}, 1500);
+  
 }
 
 function increasePlayerScore(points, player) {
@@ -234,8 +237,6 @@ for (i = 0; i < JSON_data.length; i++) {
 
   var koreanWord = JSON_data[i]["korean"];
 
-  koreanWord = "식당에서 음식을 먹다";
-
   koreanWord = koreanWord.split(" ");
   koreanWord = koreanWord.join("\r\n");
 
@@ -247,9 +248,7 @@ for (i = 0; i < JSON_data.length; i++) {
 
   if (JSON_data[i]["image"] == "") {
     var englishWord = JSON_data[i]["english"];
-
-    englishWord = "to eat Food in a restaurant";
-    
+   
     englishWord = englishWord.match(/.{1,10}(\s|$)/g);
     englishWord = englishWord.join("\r\n");
 
