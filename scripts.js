@@ -1,5 +1,6 @@
 //todo: cards should fold into stack off side of table to remove clutter
 
+
 //Let's check if stt can be complete
 try {
   webkitSpeechRecognition;
@@ -56,6 +57,11 @@ function changePlayerTurn() {
 	
 	setTimeout(() => {
 		document.getElementById("playerTurnDisplay").innerHTML = "Player " + playerTurn + "'s Turn";
+    document.getElementById("playerTurnDisplay1").innerHTML = "Player " + playerTurn + "'s Turn";
+
+    const element = document.querySelector('#playerTurnDisplay1');
+    element.classList.add('animate__animated', 'animate__bounceOutLeft');
+
 	}, 1500);
 }
 
@@ -85,7 +91,7 @@ function checkForMatch() {
 	  
 	  isMatch ? disableCards() : unflipCards();
 	  if (isMatch) {increasePlayerScore(5, playerTurn);}
-	  changePlayerTurn();
+	  if (!isMatch) {changePlayerTurn();}
 	  
   }  
   
@@ -157,7 +163,7 @@ function done() {
 	}
 	
 	isMatch ? disableCards() : unflipCards();
-	changePlayerTurn();
+	if (!isMatch) {changePlayerTurn();}
 	
 }
 
@@ -212,7 +218,7 @@ var textImage = TextImage();
 // create new TextImage object with customize style
 var style = {
     font: 'courier-new',
-    align: 'center',
+    align: 'left',
     color: 'black',
     size: 50,
 };
@@ -225,7 +231,15 @@ var i;
 for (i = 0; i < JSON_data.length; i++) {
  
   // convert text message to base64 dataURL
-  var data = textImage.toDataURL(JSON_data[i]["korean"]);
+
+  var koreanWord = JSON_data[i]["korean"];
+
+  koreanWord = "식당에서 음식을 먹다";
+
+  koreanWord = koreanWord.split(" ");
+  koreanWord = koreanWord.join("\r\n");
+
+  var data = textImage.toDataURL(koreanWord);
   document.getElementById(String.fromCharCode(97 + i) + "1").src = data;
   document.getElementById(String.fromCharCode(97 + i) + "1").alt = JSON_data[i]["korean"];
 
@@ -233,7 +247,11 @@ for (i = 0; i < JSON_data.length; i++) {
 
   if (JSON_data[i]["image"] == "") {
     var englishWord = JSON_data[i]["english"];
-    englishWord = englishWord.replace(/,\s/, ',\n');
+
+    englishWord = "to eat Food in a restaurant";
+    
+    englishWord = englishWord.match(/.{1,10}(\s|$)/g);
+    englishWord = englishWord.join("\r\n");
 
     var data = textImage.toDataURL(englishWord);
     document.getElementById(String.fromCharCode(97 + i) + "2").src = data;
