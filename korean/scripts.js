@@ -148,15 +148,15 @@ retryButton.addEventListener('click', retry);
 
 
 function retry() {
-	var chineseCardWord = firstCard.children[0].alt + secondCard.children[0].alt;
-  speechToText(chineseCardWord);	
+	var koreanCardWord = firstCard.children[0].alt + secondCard.children[0].alt;
+  speechToText(koreanCardWord);	
 }
 
 function done() {
 	console.log("Done");
   speechPrompt.classList.add("invisible");
 	
-  var chineseCardWord = firstCard.children[0].alt + secondCard.children[0].alt;
+  var koreanCardWord = firstCard.children[0].alt + secondCard.children[0].alt;
 	
 	if (resultPara.textContent == 'I heard the correct phrase!') {
 		isMatch = true;
@@ -180,8 +180,8 @@ function yes() {
 
     if (webkitSpeechRecognitionAvailable) {
 		  speechPrompt.classList.remove("invisible");
-      var chineseCardWord = firstCard.children[0].alt + secondCard.children[0].alt;
-      speechToText(chineseCardWord);
+      var koreanCardWord = firstCard.children[0].alt + secondCard.children[0].alt;
+      speechToText(koreanCardWord);
     } else {
       increasePlayerScore(5, playerTurn);
       isMatch ? disableCards() : unflipCards();
@@ -235,14 +235,14 @@ for (i = 0; i < JSON_data.length; i++) {
  
   // convert text message to base64 dataURL
 
-  var chineseWord = JSON_data[i]["chinese"];
+  var koreanWord = JSON_data[i]["korean"];
 
-  chineseWord = chineseWord.split(" ");
-  chineseWord = chineseWord.join("\r\n");
+  koreanWord = koreanWord.split(" ");
+  koreanWord = koreanWord.join("\r\n");
 
-  var data = textImage.toDataURL(chineseWord);
+  var data = textImage.toDataURL(koreanWord);
   document.getElementById(String.fromCharCode(97 + i) + "1").src = data;
-  document.getElementById(String.fromCharCode(97 + i) + "1").alt = JSON_data[i]["chinese"];
+  document.getElementById(String.fromCharCode(97 + i) + "1").alt = JSON_data[i]["korean"];
 
   // convert text message to base64 dataURL
 
@@ -266,7 +266,7 @@ for (i = 0; i < JSON_data.length; i++) {
 //Text to Speech
 function talk(text){  
   lockBoard = true;
-  responsiveVoice.speak(text, 'Chinese Female');
+  responsiveVoice.speak(text, 'Korean Female');
   setTimeout(() => {
     lockBoard = false;
   }, 1000);
@@ -305,7 +305,7 @@ function speechToText(phrase) {
   var speechRecognitionList = new SpeechGrammarList();
   speechRecognitionList.addFromString(grammar, 1);
   recognition.grammars = speechRecognitionList;
-  recognition.lang = 'zh-CN';
+  recognition.lang = 'ko-KR';
   recognition.interimResults = false;
   recognition.maxAlternatives = 5;
 

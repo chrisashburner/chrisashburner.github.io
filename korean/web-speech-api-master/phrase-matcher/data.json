@@ -1,0 +1,108 @@
+/*JSON_String = '[{"korean" : "korean" ", "english" : "하다", "english" ", "english" : "to do"},\
+{"korean" : "korean" ", "english" : "가다", "english" ", "english" : "to go"},\
+{"korean" : "korean" ", "english" : "오다", "english" ", "english" : "to come"},\
+{"korean" : "korean" ", "english" : "보다", "english" ", "english" : "to see"},\
+{"korean" : "korean" ", "english" : "먹다", "english" ", "english" : "to eat"},\
+{"korean" : "korean" ", "english" : "만나다", "english" ", "english" : "to meet"}]';*/
+
+JSON_String = '[\
+{"korean" : "오다", 		"english" : "to come"},\
+{"korean" : "마시다", 		"english" : "to drink"},\
+{"korean" : "먹다", 		"english" : "to eat"},\
+{"korean" : "주다", 		"english" : "to give"},\
+{"korean" : "가다", 		"english" : "to go"},\
+{"korean" : "듣다", 		"english" : "to hear"},\
+{"korean" : "배우다", 		"english" : "to learn"},\
+{"korean" : "만들다", 		"english" : "to make"},\
+{"korean" : "앉다", 		"english" : "to sit"},\
+{"korean" : "자다", 		"english" : "to sleep"},\
+{"korean" : "씻다", 		"english" : "to wash"},\
+{"korean" : "쓰다", 		"english" : "to write"},\
+{"korean" : "울다", 		"english" : "to cry"},\
+{"korean" : "갖다", 		"english" : "to have"},\
+{"korean" : "웃다", 		"english" : "to laugh"},\
+{"korean" : "보다", 		"english" : "to see"},\
+{"korean" : "일어나다", 	"english" : "to get up"},\
+{"korean" : "걷다", 		"english" : "to walk"},\
+{"korean" : "춤추다", 		"english" : "to dance"},\
+{"korean" : "만나다", 		"english" : "to meet"},\
+{"korean" : "공부하다", 	"english" : "to study"},\
+{"korean" : "운전하다", 	"english" : "to drive"},\
+{"korean" : "사다", 		"english" : "to buy"},\
+{"korean" : "읽다", 		"english" : "to read"},\
+{"korean" : "주문하다", 	"english" : "to order"},\
+{"korean" : "입다", 		"english" : "to wear"},\
+{"korean" : "찍다", 		"english" : "to take (picture)"},\
+{"korean" : "쓰다", 		"english" : "to wear (hat, eyewear)"},\
+{"korean" : "신다", 		"english" : "to wear (shoes, socks, footwear)"},\
+{"korean" : "빌리다", 		"english" : "to borrow, lend"},\
+{"korean" : "전화하다", 	"english" : "to telephone"},\
+{"korean" : "말하다", 		"english" : "to talk, speak"},\
+{"korean" : "가르치다", 	"english" : "to teach"},\
+{"korean" : "기다리다", 	"english" : "to wait"},\
+{"korean" : "걸다", 		"english" : "to call, dial"},\
+{"korean" : "청소하다",	"english" : "to clean"},\
+{"korean" : "타다", 		"english" : "to ride"},\
+{"korean" : "나가다", 		"english" : "to exit"},\
+{"korean" : "들어오다", 	"english" : "to enter"},\
+{"korean" : "물어보다", 	"english" : "to ask"},\
+{"korean" : "필요하다", 	"english" : "to need"},\
+{"korean" : "도와주다", 	"english" : "to help"},\
+{"korean" : "열다", 		"english" : "to open"},\
+{"korean" : "닫다", 		"english" : "to close"},\
+{"korean" : "일하다",		"english" : "to work"},\
+{"korean" : "쉬다", 		"english" : "to rest"},\
+{"korean" : "운동하다", 	"english" : "to exercise"},\
+{"korean" : "생각하다", 	"english" : "to think"},\
+{"korean" : "알다", 		"english" : "to know"},\
+{"korean" : "모르다", 		"english" : "to not know"},\
+{"korean" : "요리하다", 	"english" : "to cook"},\
+{"korean" : "끓이다", 		"english" : "to boil"},\
+{"korean" : "썰다", 		"english" : "to chop, slice"},\
+{"korean" : "튀기다", 		"english" : "to deep fry"},\
+{"korean" : "재다", 		"english" : "to measure, weigh"},\
+{"korean" : "섞다", 		"english" : "to mix, blend"},\
+{"korean" : "굽다", 		"english" : "to roast, grill, bake"},\
+{"korean" : "볶다", 		"english" : "to fry"},\
+{"korean" : "찌다", 		"english" : "to steam"},\
+{"korean" : "휘젓다", 		"english" : "to stir"},\
+{"korean" : "하다", 		"english" : "to do"},\
+{"korean" : "있다", 		"english" : "to have"},\
+{"korean" : "없다", 		"english" : "to not have"},\
+{"korean" : "이야기하다", 	"english" : "to talk, chat"},\
+{"korean" : "연습하다", 	"english" : "to practice"},\
+{"korean" : "묻다", 		"english" : "to ask"},\
+{"korean" : "내다", 		"english" : "to pay"},\
+{"korean" : "살다", 		"english" : "to live"},\
+{"korean" : "죽다", 		"english" : "to die"},\
+{"korean" : "태어나다", 	"english" : "to be born"},\
+{"korean" : "사랑하다", 	"english" : "to love"},\
+{"korean" : "좋아하다", 	"english" : "to like"},\
+{"korean" : "싫어하다", 	"english" : "to hate, dislike"},\
+{"korean" : "결혼하다", 	"english" : "to marry"},\
+{"korean" : "축하하다", 	"english" : "to congratulate"},\
+{"korean" : "걱정하다", 	"english" : "to worry"},\
+{"korean" : "약속하다", 	"english" : "to promise"},\
+{"korean" : "거짓말하다", 	"english" : "to lie"},\
+{"korean" : "고백하다", 	"english" : "to confess"},\
+{"korean" : "죄송하다", 	"english" : "to be sorry"},\
+{"korean" : "찾다", 		"english" : "to find, to look for"},\
+{"korean" : "준비하다", 	"english" : "to prepare"},\
+{"korean" : "가지다", 		"english" : "to have"},\
+{"korean" : "기억하다", 	"english" : "to remember"},\
+{"korean" : "꿈꾸다", 		"english" : "to dream"},\
+{"korean" : "시작하다", 	"english" : "to start"},\
+{"korean" : "끝나다", 		"english" : "to finish"},\
+{"korean" : "보내다", 		"english" : "to send"},\
+{"korean" : "사용하다", 	"english" : "to use"},\
+{"korean" : "팔다", 		"english" : "to sell"},\
+{"korean" : "싸우다", 		"english" : "to fight"},\
+{"korean" : "대답하다", 	"english" : "to answer"},\
+{"korean" : "소개하다", 	"english" : "to introduce"},\
+{"korean" : "출발하다", 	"english" : "to depart"},\
+{"korean" : "도착하다", 	"english" : "to arrive"},\
+{"korean" : "벗다", 		"english" : "to undress, take off clothes"},\
+{"korean" : "이기다", 		"english" : "to win, defeat"},\
+{"korean" : "지다", 		"english" : "to lose, be defeated"},\
+{"korean" : "서두르다"	, 	"english" : "to hurry, rush"},\
+{"korean" : "사랑에 빠지다", 	"english" : "to fall in love"}]';

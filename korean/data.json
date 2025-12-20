@@ -1,0 +1,609 @@
+JSON_String_Test='[\
+{"korean":"하다","english":"todo"},\
+{"korean":"가다","english":"togo"},\
+{"korean":"오다","english":"tocome"},\
+{"korean":"보다","english":"tosee"},\
+{"korean":"먹다","english":"toeat"},\
+{"korean":"만나다","english":"tomeet"}]';
+
+JSON_String_Time='[\
+{"korean":"오전일곱시사분","english":"7:04AM"},\
+{"korean":"오전두시반","english":"2:30AM"},\
+{"korean":"오전두시반","english":"2:30AM"},\
+{"korean":"오전다섯시삼십사분","english":"5:34AM"},\
+{"korean":"오전열한시칠분","english":"11:07AM"},\
+{"korean":"오후다섯시반","english":"5:30PM"},\
+{"korean":"오후열한시삼분","english":"11:03PM"},\
+{"korean":"오전일곱시반","english":"7:30AM"},\
+{"korean":"오후세시십이분","english":"3:12PM"},\
+{"korean":"오후네시이십삼분","english":"4:23PM"},\
+{"korean":"오후열한시반","english":"11:30PM"},\
+{"korean":"오후세시오분","english":"3:05PM"},\
+{"korean":"오전아홉시반","english":"9:30AM"},\
+{"korean":"오후세시반","english":"3:30PM"},\
+{"korean":"오전열한시삼십팔분","english":"11:38AM"},\
+{"korean":"오후열두시오분","english":"12:05PM"},\
+{"korean":"오후일곱시오십삼분","english":"7:53PM"},\
+{"korean":"오전두시사십오분","english":"2:45AM"},\
+{"korean":"오전열두시이십삼분","english":"12:23AM"},\
+{"korean":"오전일곱시이십삼분","english":"7:23AM"},\
+{"korean":"오후다섯시오십일분","english":"5:51PM"},\
+{"korean":"오후세시오십이분","english":"3:52PM"},\
+{"korean":"오전아홉시오분","english":"9:05AM"},\
+{"korean":"오전한시이십오분","english":"1:25AM"},\
+{"korean":"오후네시사십삼분","english":"4:43PM"},\
+{"korean":"오전여섯시이십분","english":"6:20AM"},\
+{"korean":"오후일곱시반","english":"7:30PM"},\
+{"korean":"오후열시오십팔분","english":"10:58PM"},\
+{"korean":"오후아홉시사십이분","english":"9:42PM"},\
+{"korean":"오전아홉시삼십이분","english":"9:32AM"},\
+{"korean":"오후한시이십이분","english":"1:22PM"},\
+{"korean":"오전열한시십사분","english":"11:14AM"},\
+{"korean":"오전네시십육분","english":"4:16AM"},\
+{"korean":"오후한시팔분","english":"1:08PM"},\
+{"korean":"오전일곱시삼십칠분","english":"7:37AM"},\
+{"korean":"오전한시이십칠분","english":"1:27AM"},\
+{"korean":"오전두시반","english":"2:30AM"},\
+{"korean":"오후열두시반","english":"12:30PM"},\
+{"korean":"오전네시사십분","english":"4:40AM"},\
+{"korean":"오후열한시십팔분","english":"11:18PM"},\
+{"korean":"오전여섯시이십사분","english":"6:24AM"},\
+{"korean":"오후아홉시이십팔분","english":"9:28PM"},\
+{"korean":"오후다섯시오십분","english":"5:50PM"},\
+{"korean":"오전한시칠분","english":"1:07AM"},\
+{"korean":"오후여덟시분","english":"8:00PM"},\
+{"korean":"오전아홉시반","english":"9:30AM"},\
+{"korean":"오전다섯시오십사분","english":"5:54AM"},\
+{"korean":"오전한시칠분","english":"1:07AM"},\
+{"korean":"오후네시삼십구분","english":"4:39PM"},\
+{"korean":"오전열한시이십칠분","english":"11:27AM"},\
+{"korean":"오후다섯시반","english":"5:30PM"},\
+{"korean":"오전열두시십오분","english":"12:15AM"},\
+{"korean":"오후일곱시팔분","english":"7:08PM"},\
+{"korean":"오전한시반","english":"1:30AM"},\
+{"korean":"오후여덟시십분","english":"8:10PM"},\
+{"korean":"오전두시이십구분","english":"2:29AM"},\
+{"korean":"오전다섯시오십사분","english":"5:54AM"},\
+{"korean":"오전열두시십사분","english":"12:14AM"},\
+{"korean":"오후다섯시사십육분","english":"5:46PM"},\
+{"korean":"오후여섯시오십분","english":"6:50PM"},\
+{"korean":"오전열한시삼십오분","english":"11:35AM"},\
+{"korean":"오후여덟시사십구분","english":"8:49PM"},\
+{"korean":"오전일곱시반","english":"7:30AM"},\
+{"korean":"오후일곱시반","english":"7:30PM"},\
+{"korean":"오전한시이십구분","english":"1:29AM"},\
+{"korean":"오전두시반","english":"2:30AM"},\
+{"korean":"오전한시사십팔분","english":"1:48AM"},\
+{"korean":"오후열시반","english":"10:30PM"},\
+{"korean":"오후열두시반","english":"12:30PM"},\
+{"korean":"오후아홉시이십칠분","english":"9:27PM"},\
+{"korean":"오전일곱시이십팔분","english":"7:28AM"},\
+{"korean":"오후다섯시삼십구분","english":"5:39PM"},\
+{"korean":"오후열두시사십팔분","english":"12:48PM"},\
+{"korean":"오전세시반","english":"3:30AM"},\
+{"korean":"오전열시사십칠분","english":"10:47AM"},\
+{"korean":"오후한시구분","english":"1:09PM"},\
+{"korean":"오후두시반","english":"2:30PM"},\
+{"korean":"오후열시반","english":"10:30PM"},\
+{"korean":"오전다섯시반","english":"5:30AM"},\
+{"korean":"오전여섯시이십분","english":"6:20AM"},\
+{"korean":"오전열두시반","english":"12:30AM"},\
+{"korean":"오후여섯시오십분","english":"6:50PM"},\
+{"korean":"오후한시오십분","english":"1:50PM"},\
+{"korean":"오전일곱시이분","english":"7:02AM"},\
+{"korean":"오전두시삼십삼분","english":"2:33AM"},\
+{"korean":"오전열두시오십삼분","english":"12:53AM"},\
+{"korean":"오전다섯시반","english":"5:30AM"},\
+{"korean":"오후세시칠분","english":"3:07PM"},\
+{"korean":"오전세시반","english":"3:30AM"},\
+{"korean":"오후한시칠분","english":"1:07PM"},\
+{"korean":"오전열한시반","english":"11:30AM"},\
+{"korean":"오후세시반","english":"3:30PM"},\
+{"korean":"오전일곱시사십삼분","english":"7:43AM"},\
+{"korean":"오전열한시반","english":"11:30AM"},\
+{"korean":"오전네시반","english":"4:30AM"},\
+{"korean":"오후여덟시삼십오분","english":"8:35PM"},\
+{"korean":"오후한시반","english":"1:30PM"},\
+{"korean":"오전여섯시십팔분","english":"6:18AM"},\
+{"korean":"오전세시사십오분","english":"3:45AM"},\
+{"korean":"오후네시반","english":"4:30PM"},\
+{"korean":"오후네시사십사분","english":"4:44PM"},\
+{"korean":"오전두시사십칠분","english":"2:47AM"},\
+{"korean":"오후다섯시반","english":"5:30PM"},\
+{"korean":"오전한시반","english":"1:30AM"},\
+{"korean":"오전네시십이분","english":"4:12AM"},\
+{"korean":"오후여덟시십오분","english":"8:15PM"},\
+{"korean":"오후네시반","english":"4:30PM"},\
+{"korean":"오전세시이십칠분","english":"3:27AM"},\
+{"korean":"오전다섯시사십일분","english":"5:41AM"}]';
+
+
+JSON_String_verbs='[\
+    {"korean":"오다","image":"","english":"to come"},\
+    {"korean":"마시다","image":"","english":"to drink"},\
+    {"korean":"먹다","image":"","english":"to eat"},\
+    {"korean":"주다","image":"","english":"to give"},\
+    {"korean":"가다","image":"","english":"to go"},\
+    {"korean":"듣다","image":"","english":"to hear"},\
+    {"korean":"배우다","image":"","english":"to learn"},\
+    {"korean":"만들다","image":"","english":"to make"},\
+    {"korean":"앉다","image":"","english":"to sit"},\
+    {"korean":"자다","image":"","english":"to sleep"},\
+    {"korean":"씻다","image":"","english":"to wash"},\
+    {"korean":"쓰다","image":"","english":"to write"},\
+    {"korean":"울다","image":"","english":"to cry"},\
+    {"korean":"갖다","image":"","english":"to have"},\
+    {"korean":"웃다","image":"","english":"to laugh"},\
+    {"korean":"보다","image":"","english":"to see"},\
+    {"korean":"일어나다","image":"","english":"to get up"},\
+    {"korean":"걷다","image":"","english":"to walk"},\
+    {"korean":"춤추다","image":"","english":"to dance"},\
+    {"korean":"만나다","image":"","english":"to meet"},\
+    {"korean":"공부하다","image":"","english":"to study"},\
+    {"korean":"운전하다","image":"","english":"to drive"},\
+    {"korean":"사다","image":"","english":"to buy"},\
+    {"korean":"읽다","image":"","english":"to read"},\
+    {"korean":"주문하다","image":"","english":"to order"},\
+    {"korean":"입다","image":"","english":"to wear"},\
+    {"korean":"찍다","image":"","english":"to take (picture)"},\
+    {"korean":"쓰다","image":"","english":"to wear (hat, eyewear)"},\
+    {"korean":"신다","image":"","english":"to wear (shoes, socks, footwear)"},\
+    {"korean":"빌리다","image":"","english":"to borrow, lend"},\
+    {"korean":"전화하다","image":"","english":"to telephone"},\
+    {"korean":"말하다","image":"","english":"to talk, speak"},\
+    {"korean":"가르치다","image":"","english":"to teach"},\
+    {"korean":"기다리다","image":"","english":"to wait"},\
+    {"korean":"걸다","image":"","english":"to call, dial"},\
+    {"korean":"청소하다",	"image":"","english":"to clean"},\
+    {"korean":"타다","image":"","english":"to ride"},\
+    {"korean":"나가다","image":"","english":"to exit"},\
+    {"korean":"들어오다","image":"","english":"to enter"},\
+    {"korean":"물어보다","image":"","english":"to ask"},\
+    {"korean":"필요하다","image":"","english":"to need"},\
+    {"korean":"도와주다","image":"","english":"to help"},\
+    {"korean":"열다","image":"","english":"to open"},\
+    {"korean":"닫다","image":"","english":"to close"},\
+    {"korean":"일하다","image":"","english":"to work"},\
+    {"korean":"쉬다","image":"","english":"to rest"},\
+    {"korean":"운동하다","image":"","english":"to exercise"},\
+    {"korean":"생각하다","image":"","english":"to think"},\
+    {"korean":"알다","image":"","english":"to know"},\
+    {"korean":"모르다","image":"","english":"to not know"},\
+    {"korean":"요리하다","image":"","english":"to cook"},\
+    {"korean":"끓이다","image":"","english":"to boil"},\
+    {"korean":"썰다","image":"","english":"to chop, slice"},\
+    {"korean":"튀기다","image":"","english":"to deepfry"},\
+    {"korean":"재다","image":"","english":"to measure, weigh"},\
+    {"korean":"섞다","image":"","english":"to mix, blend"},\
+    {"korean":"굽다","image":"","english":"to roast, grill, bake"},\
+    {"korean":"볶다","image":"","english":"to fry"},\
+    {"korean":"찌다","image":"","english":"to steam"},\
+    {"korean":"휘젓다","image":"","english":"to stir"},\
+    {"korean":"하다","image":"","english":"to do"},\
+    {"korean":"있다","image":"","english":"to have"},\
+    {"korean":"없다","image":"","english":"to not have"},\
+    {"korean":"이야기하다","image":"","english":"to talk, chat"},\
+    {"korean":"연습하다","image":"","english":"to practice"},\
+    {"korean":"묻다","image":"","english":"to ask"},\
+    {"korean":"내다","image":"","english":"to pay"},\
+    {"korean":"살다","image":"","english":"to live"},\
+    {"korean":"죽다","image":"","english":"to die"},\
+    {"korean":"태어나다","image":"","english":"to be born"},\
+    {"korean":"사랑하다","image":"","english":"to love"},\
+    {"korean":"좋아하다","image":"","english":"to like"},\
+    {"korean":"싫어하다","image":"","english":"to hate, dislike"},\
+    {"korean":"결혼하다","image":"","english":"to marry"},\
+    {"korean":"축하하다","image":"","english":"to congratulate"},\
+    {"korean":"걱정하다","image":"","english":"to worry"},\
+    {"korean":"약속하다","image":"","english":"to promise"},\
+    {"korean":"거짓말하다","image":"","english":"to lie"},\
+    {"korean":"고백하다","image":"","english":"to confess"},\
+    {"korean":"죄송하다","image":"","english":"to be sorry"},\
+    {"korean":"찾다","image":"","english":"to find, to look for"},\
+    {"korean":"준비하다","image":"","english":"to prepare"},\
+    {"korean":"가지다","image":"","english":"to have"},\
+    {"korean":"기억하다","image":"","english":"to remember"},\
+    {"korean":"꿈꾸다","image":"","english":"to dream"},\
+    {"korean":"시작하다","image":"","english":"to start"},\
+    {"korean":"끝나다","image":"","english":"to finish"},\
+    {"korean":"보내다","image":"","english":"to send"},\
+    {"korean":"사용하다","image":"","english":"to use"},\
+    {"korean":"팔다","image":"","english":"to sell"},\
+    {"korean":"싸우다","image":"","english":"to fight"},\
+    {"korean":"대답하다","image":"","english":"to answer"},\
+    {"korean":"소개하다","image":"","english":"to introduce"},\
+    {"korean":"출발하다","image":"","english":"to depart"},\
+    {"korean":"도착하다","image":"","english":"to arrive"},\
+    {"korean":"벗다","image":"","english":"to undress, take off clothes"},\
+    {"korean":"이기다","image":"","english":"to win, defeat"},\
+    {"korean":"지다","image":"","english":"to lose, be defeated"},\
+    {"korean":"서두르다"	,"image":"","english":"to hurry, rush"},\
+    {"korean":"사랑에빠지다","image":"","english":"to fall in love"}]';
+
+JSON_String='[\
+{"image":"","english":"to go","korean":"가다"},\
+{"image":"","english":"to go to school","korean":"학교에 가다"},\
+{"image":"","english":"to turn on the light","korean":"불을 켜다"},\
+{"image":"","english":"to turn off the light","korean":"불을 끄다"},\
+{"image":"","english":"to come","korean":"오다"},\
+{"image":"","english":"to come home","korean":"집에 오다"},\
+{"image":"","english":"to come here","korean":"여기에 오다"},\
+{"image":"","english":"to play","korean":"놀다"},\
+{"image":"","english":"to play with my friends","korean":"친구들과 놀다"},\
+{"image":"","english":"to eat","korean":"먹다"},\
+{"image":"","english":"to eat Food","korean":"음식을 먹다"},\
+{"image":"","english":"to eat Food in a restaurant","korean":"식당에서 음식을 먹다"},\
+{"image":"","english":"to sleep","korean":"자다"},\
+{"image":"","english":"to sleep late","korean":"늦게 자다"},\
+{"image":"","english":"to run","korean":"뛰다"},\
+{"image":"","english":"to run fast","korean":"빨리 뛰다"},\
+{"image":"","english":"to watch","korean":"보다"},\
+{"image":"","english":"to watch TV","korean":"티비를 보다"},\
+{"image":"","english":"to drink","korean":"마시다"},\
+{"image":"","english":"to drink water","korean":"물을 마시다"},\
+{"image":"","english":"to work","korean":"일하다"},\
+{"image":"","english":"to work hard","korean":"열심히 일하다"},\
+{"image":"","english":"to study","korean":"공부하다"},\
+{"image":"","english":"to study Math","korean":"수학을 공부하다"},\
+{"image":"","english":"to rest","korean":"쉬다"},\
+{"image":"","english":"to rest in the park","korean":"공원에서 쉬다"},\
+{"image":"","english":"to sing","korean":"노래하다"},\
+{"image":"","english":"to sing merrily","korean":"즐겁게 노래하다"},\
+{"image":"","english":"to buy","korean":"사다"},\
+{"image":"","english":"to buy shoes","korean":"신발을 사다"},\
+{"image":"","english":"to make","korean":"만들다"},\
+{"image":"","english":"to make a toy","korean":"장난감을 만들다"},\
+{"image":"","english":"to drive","korean":"운전하다"},\
+{"image":"","english":"to drive a truck","korean":"트럭을 운전하다"},\
+{"image":"","english":"to swim","korean":"수영하다"},\
+{"image":"","english":"to swim in the sea","korean":"바다에서 수영하다"},\
+{"image":"","english":"to sit","korean":"앉다"},\
+{"image":"","english":"to sit on the chair","korean":"의자에 앉다"},\
+{"image":"","english":"to sell","korean":"팔다"},\
+{"image":"","english":"to sell the furniture","korean":"가구를 팔다"},\
+{"image":"","english":"to write a letter","korean":"편지를 쓰다"},\
+{"image":"","english":"to listen","korean":"듣다"},\
+{"image":"","english":"to listen to the music","korean":"음악을 듣다"},\
+{"image":"","english":"to tell","korean":"말하다"},\
+{"image":"","english":"to tell your mum","korean":"엄마에게 말하다"},\
+{"image":"","english":"to teach","korean":"가르치다"},\
+{"image":"","english":"to teach English","korean":"영어를 가르치다"},\
+{"image":"","english":"to cook fish","korean":"생선을 요리하다"},\
+{"image":"","english":"to meet people","korean":"사람들을 만나다"},\
+{"image":"","english":"to give","korean":"주다"},\
+{"image":"","english":"to give a present","korean":"선물을 주다"},\
+{"image":"","english":"to invite","korean":"초대하다"},\
+{"image":"","english":"to invite people","korean":"사람들을 초대하다"},\
+{"image":"","english":"to dance","korean":"춤추다"},\
+{"image":"","english":"to dance in the room","korean":"방안에서 춤추다"},\
+{"image":"","english":"to fight","korean":"싸우다"},\
+{"image":"","english":"to fight in the war","korean":"전쟁에서 싸우다"},\
+{"image":"","english":"to learn","korean":"배우다"},\
+{"image":"","english":"to learn French","korean":"불어를 배우다"},\
+{"image":"","english":"to wait for the train","korean":"기차를 기다리다"},\
+{"image":"","english":"to wait","korean":"기다리다"},\
+{"image":"","english":"to ride","korean":"타다"},\
+{"image":"","english":"to ride a bike","korean":"자전거를 타다"},\
+{"image":"","english":"to receive","korean":"받다"},\
+{"image":"","english":"to receive a letter","korean":"편지를 받다"},\
+{"image":"","english":"to love","korean":"사랑하다"},\
+{"image":"","english":"to love her","korean":"그녀를 사랑하다"},\
+{"image":"","english":"to like","korean":"좋아하다"},\
+{"image":"","english":"to like him","korean":"그를 좋아하다"},\
+{"image":"","english":"to marry","korean":"결혼하다"},\
+{"image":"","english":"to marry her","korean":"그녀와 결혼하다"},\
+{"image":"","english":"to stand","korean":"일어나다"},\
+{"image":"","english":"to stand quietly","korean":"조용히 일어나다"},\
+{"image":"","english":"to understand","korean":"이해하다"},\
+{"image":"","english":"to understand it","korean":"그것을 이해하다"},\
+{"image":"","english":"to know","korean":"알다"},\
+{"image":"","english":"to know the answer","korean":"답을 알다"},\
+{"image":"","english":"to push","korean":"밀다"},\
+{"image":"","english":"to push the door","korean":"문을 밀다"},\
+{"image":"","english":"to pull the handle","korean":"손잡이를 당기다"},\
+{"image":"","english":"to pull","korean":"당기다"},\
+{"image":"","english":"to open","korean":"열다"},\
+{"image":"","english":"to open the door","korean":"문을 열다"},\
+{"image":"","english":"to close","korean":"닫다"},\
+{"image":"","english":"to close the window","korean":"창문을 닫다"},\
+{"image":"","english":"to lock","korean":"잠그다"},\
+{"image":"","english":"to lock the door","korean":"문을 잠그다"},\
+{"image":"","english":"to read","korean":"읽다"},\
+{"image":"","english":"to read a book","korean":"책을 읽다"},\
+{"image":"","english":"to look for","korean":"찾다"},\
+{"image":"","english":"to look for the key","korean":"열쇠를 찾다"},\
+{"image":"","english":"to cry","korean":"울다"},\
+{"image":"","english":"to cry alone","korean":"혼자 울다"},\
+{"image":"","english":"to greet","korean":"인사하다"},\
+{"image":"","english":"to greet the teacher","korean":"선생님께 인사하다"},\
+{"image":"","english":"to fly","korean":"날다"},\
+{"image":"","english":"to fly like a bird","korean":"새 처럼 날다"},\
+{"image":"","english":"to walk","korean":"걷다"},\
+{"image":"","english":"to walk alone","korean":"혼자 걷다"}]';
+
+
+
+JSON_String_words='[{"korean":"가격","image":"https://chrisashburner.github.io/img/Price.jpg","english":"Price"},\
+{"korean":"가구","image":"https://chrisashburner.github.io/img/Furniture.jpg","english":"Furniture"},\
+{"korean":"가방","image":"https://chrisashburner.github.io/img/Bag.jpg","english":"Bag"},\
+{"korean":"가을","image":"https://chrisashburner.github.io/img/Autumn.jpg","english":"Autumn"},\
+{"korean":"가족","image":"https://chrisashburner.github.io/img/Family.jpg","english":"Family"},\
+{"korean":"값","image":"https://chrisashburner.github.io/img/Value.jpg","english":"Value"},\
+{"korean":"강","image":"https://chrisashburner.github.io/img/River.jpg","english":"River"},\
+{"korean":"거리","image":"https://chrisashburner.github.io/img/Street.jpg","english":"Street"},\
+{"korean":"걱정","image":"https://chrisashburner.github.io/img/Worry.jpg","english":"Worry"},\
+{"korean":"결혼식","image":"https://chrisashburner.github.io/img/WeddingCeremony.jpg","english":"WeddingCeremony"},\
+{"korean":"계절","image":"https://chrisashburner.github.io/img/Season.jpg","english":"Season"},\
+{"korean":"계획","image":"https://chrisashburner.github.io/img/Plan.jpg","english":"Plan"},\
+{"korean":"고양이","image":"https://chrisashburner.github.io/img/Cat.jpg","english":"Cat"},\
+{"korean":"고향","image":"https://chrisashburner.github.io/img/Hometown.jpg","english":"Hometown"},\
+{"korean":"곳","image":"https://chrisashburner.github.io/img/Place.jpg","english":"Place"},\
+{"korean":"공연","image":"https://chrisashburner.github.io/img/Show.jpg","english":"Show"},\
+{"korean":"공원","image":"https://chrisashburner.github.io/img/Park.jpg","english":"Park"},\
+{"korean":"공책","image":"https://chrisashburner.github.io/img/Notebook.jpg","english":"Notebook"},\
+{"korean":"공항","image":"https://chrisashburner.github.io/img/Airport.jpg","english":"Airport"},\
+{"korean":"과일","image":"https://chrisashburner.github.io/img/Fruit.jpg","english":"Fruit"},\
+{"korean":"과자","image":"https://chrisashburner.github.io/img/Snack.jpg","english":"Snack"},\
+{"korean":"관심","image":"https://chrisashburner.github.io/img/Attention.jpg","english":"Attention"},\
+{"korean":"교통사고","image":"https://chrisashburner.github.io/img/TrafficAccident.jpg","english":"Traffic Accident"},\
+{"korean":"구두","image":"https://chrisashburner.github.io/img/Shoes.jpg","english":"Shoes"},\
+{"korean":"구입","image":"https://chrisashburner.github.io/img/Purchase.jpg","english":"Purchase"},\
+{"korean":"그림","image":"https://chrisashburner.github.io/img/Drawing.jpg","english":"Drawing"},\
+{"korean":"극장","image":"https://chrisashburner.github.io/img/Theater.jpg","english":"Theater"},\
+{"korean":"근처","image":"","english":"Near By"},\
+{"korean":"글자","image":"https://chrisashburner.github.io/img/Letter.jpg","english":"Letter"},\
+{"korean":"금년","image":"","english":"This Year"},\
+{"korean":"기간","image":"","english":"Term"},\
+{"korean":"기분","image":"https://chrisashburner.github.io/img/Feeling.jpg","english":"Feeling"},\
+{"korean":"김치","image":"https://chrisashburner.github.io/img/Kimchi.jpg","english":"Kimchi"},\
+{"korean":"까만색","image":"https://chrisashburner.github.io/img/Black.jpg","english":"Black"},\
+{"korean":"꽃","image":"https://chrisashburner.github.io/img/Flower.jpg","english":"Flower"},\
+{"korean":"꽃집","image":"https://chrisashburner.github.io/img/Florist.jpg","english":"Florist"},\
+{"korean":"나라","image":"https://chrisashburner.github.io/img/Country.jpg","english":"Country"},\
+{"korean":"나무","image":"https://chrisashburner.github.io/img/Tree.jpg","english":"Tree"},\
+{"korean":"날","image":"https://chrisashburner.github.io/img/Day.jpg","english":"Day"},\
+{"korean":"날씨","image":"https://chrisashburner.github.io/img/Weather.jpg","english":"Weather"},\
+{"korean":"남산","image":"","english":"South Mountain"},\
+{"korean":"내년","image":"","english":"Next Year"},\
+{"korean":"도서관","image":"https://chrisashburner.github.io/img/Library.jpg","english":"Library"},\
+{"korean":"라디오","image":"https://chrisashburner.github.io/img/Radio/jpg","english":"Radio"},\
+{"korean":"모자","image":"https://chrisashburner.github.io/img/hat.jpg","english":"Hat"},\
+{"korean":"바지","image":"https://chrisashburner.github.io/img/Pants.jpg","english":"Pants"},\
+{"korean":"냉장고","image":"https://chrisashburner.github.io/img/Refrigerator.jpg","english":"Refrigerator"},\
+{"korean":"병원","image":"https://chrisashburner.github.io/img/Hospital.jpg","english":"Hospital"},\
+{"korean":"비행기","image":"https://chrisashburner.github.io/img/Airplane.jpg","english":"Airplane"},\
+{"korean":"빵","image":"https://chrisashburner.github.io/img/Bread.jpg","english":"Bread"},\
+{"korean":"사과","image":"https://chrisashburner.github.io/img/Apple.jpg","english":"Apple"},\
+{"korean":"자동차","image":"https://chrisashburner.github.io/img/Car.jpg","english":"Car"},\
+{"korean":"자전거","image":"https://chrisashburner.github.io/img/Bicycle.jpg","english":"Bicycle"},\
+{"korean":"경주","image":"https://chrisashburner.github.io/img/","english":"Gyeongju"}]';
+
+
+/*{"korean":"년","image":"https://chrisashburner.github.io/img/","english":"Year"},\
+{"korean":"노래","image":"https://chrisashburner.github.io/img/","english":"Song"},\
+{"korean":"누나","image":"https://chrisashburner.github.io/img/","english":"Sister"},\
+{"korean":"눈물","image":"https://chrisashburner.github.io/img/","english":"Tear"},\
+{"korean":"느낌","image":"https://chrisashburner.github.io/img/","english":"Feeling"},\
+{"korean":"다음","image":"https://chrisashburner.github.io/img/","english":"Next"},\
+{"korean":"다음달","image":"https://chrisashburner.github.io/img/","english":"Next Month"},\
+{"korean":"단어","image":"https://chrisashburner.github.io/img/","english":"Word"},\
+{"korean":"달","image":"https://chrisashburner.github.io/img/","english":"Month"},\
+{"korean":"댁","image":"https://chrisashburner.github.io/img/","english":"House"},\*/
+
+/*{"korean":"돈","image":"https://chrisashburner.github.io/img/","english":"Money"},\
+{"korean":"동대문","image":"https://chrisashburner.github.io/img/","english":"Dong Dae Moon"},\
+{"korean":"동생","image":"https://chrisashburner.github.io/img/","english":"Brother"},\
+{"korean":"뒤","image":"https://chrisashburner.github.io/img/","english":"Rear"},\
+{"korean":"드라마","image":"https://chrisashburner.github.io/img/","english":"Drama"},\
+{"korean":"등산","image":"https://chrisashburner.github.io/img/","english":"Mountain Climbing"},\
+{"korean":"등산화","image":"https://chrisashburner.github.io/img/","english":"Hiking Boots"},\*/
+
+/*{"korean":"러시아","image":"https://chrisashburner.github.io/img/","english":"Russia"},\
+{"korean":"맞은편","image":"https://chrisashburner.github.io/img/","english":"Across"},\
+{"korean":"머리","image":"https://chrisashburner.github.io/img/","english":"Head"},\
+{"korean":"모습","image":"https://chrisashburner.github.io/img/","english":"Shape"},\*/
+
+/*{"korean":"무게","image":"https://chrisashburner.github.io/img/","english":"Weight"},\
+{"korean":"문","image":"https://chrisashburner.github.io/img/","english":"Door"},\
+{"korean":"문구점","image":"https://chrisashburner.github.io/img/","english":"Stationery"},\
+{"korean":"문제","image":"https://chrisashburner.github.io/img/","english":"Problem"},\
+{"korean":"문화","image":"https://chrisashburner.github.io/img/","english":"Culture"},\
+{"korean":"물건","image":"https://chrisashburner.github.io/img/","english":"Stuff"},\
+{"korean":"미국","image":"https://chrisashburner.github.io/img/","english":"United States Of America"},\
+{"korean":"밑","image":"https://chrisashburner.github.io/img/","english":"Bottom"},\*/
+
+/*{"korean":"박물관","image":"https://chrisashburner.github.io/img/","english":"Museum"},\
+{"korean":"밖","image":"https://chrisashburner.github.io/img/","english":"Outside"},\
+{"korean":"반(수업)","image":"https://chrisashburner.github.io/img/","english":"Class (Class)"},\
+{"korean":"방","image":"https://chrisashburner.github.io/img/","english":"Room"},\
+{"korean":"방법","image":"https://chrisashburner.github.io/img/","english":"Way"},\
+{"korean":"방송국","image":"https://chrisashburner.github.io/img/","english":"Broadcast Stations"},\
+{"korean":"배","image":"https://chrisashburner.github.io/img/","english":"Ship"},\
+{"korean":"배2","image":"https://chrisashburner.github.io/img/","english":"Pear2"},\
+{"korean":"배우","image":"https://chrisashburner.github.io/img/","english":"Actor"},\
+{"korean":"백화점","image":"https://chrisashburner.github.io/img/","english":"Department Store"},\
+{"korean":"버스","image":"https://chrisashburner.github.io/img/","english":"Bus"},\
+{"korean":"번호","image":"https://chrisashburner.github.io/img/","english":"Number"},\*/
+
+/*{"korean":"볼펜","image":"https://chrisashburner.github.io/img/","english":"Pen"},\
+{"korean":"봄","image":"https://chrisashburner.github.io/img/","english":"Spring"},\
+{"korean":"부모","image":"https://chrisashburner.github.io/img/","english":"Parents"},\
+{"korean":"부모님","image":"https://chrisashburner.github.io/img/","english":"Parents"},\
+{"korean":"부분","image":"https://chrisashburner.github.io/img/","english":"Part"},\
+{"korean":"부탁","image":"https://chrisashburner.github.io/img/","english":"Request"},\
+{"korean":"분위기","image":"https://chrisashburner.github.io/img/","english":"Atmosphere"},\
+{"korean":"불고기","image":"https://chrisashburner.github.io/img/","english":"Bulgogi"},\
+{"korean":"비","image":"https://chrisashburner.github.io/img/","english":"Ratio"},\*/
+
+/*{"korean":"자리","image":"https://chrisashburner.github.io/img/","english":"Seat"},\*/
+
+
+
+/*{"korean":"내용","image":"https://chrisashburner.github.io/img/","english":"Contents"},\
+{"korean":"내일","image":"https://chrisashburner.github.io/img/","english":"Tomorrow"},\
+{"korean":"냉면","image":"https://chrisashburner.github.io/img/","english":"Cold Noodles"},\*/
+
+/*{"korean":"사람","image":"https://chrisashburner.github.io/img/","english":"Person"},\
+{"korean":"사무실","image":"https://chrisashburner.github.io/img/","english":"Office"},\
+{"korean":"사은품","image":"https://chrisashburner.github.io/img/","english":"Gifts"},\
+{"korean":"사전","image":"https://chrisashburner.github.io/img/","english":"Dictionary"},\
+{"korean":"사진","image":"https://chrisashburner.github.io/img/","english":"Photo"},\
+{"korean":"산","image":"https://chrisashburner.github.io/img/","english":"Mountain"},\
+{"korean":"색","image":"https://chrisashburner.github.io/img/","english":"Color"},\
+{"korean":"색깔","image":"https://chrisashburner.github.io/img/","english":"Color"},\
+{"korean":"생각","image":"https://chrisashburner.github.io/img/","english":"Think"},\
+{"korean":"생일","image":"https://chrisashburner.github.io/img/","english":"Birthday"},\
+{"korean":"생활","image":"https://chrisashburner.github.io/img/","english":"Life"},\
+{"korean":"서울","image":"https://chrisashburner.github.io/img/","english":"Seoul"},\
+{"korean":"서울역","image":"https://chrisashburner.github.io/img/","english":"Seoul Station"},\
+{"korean":"서점","image":"https://chrisashburner.github.io/img/","english":"Bookstore"},\
+{"korean":"선물","image":"https://chrisashburner.github.io/img/","english":"Gift"},\
+{"korean":"선생님","image":"https://chrisashburner.github.io/img/","english":"Teacher"},\
+{"korean":"설명","image":"https://chrisashburner.github.io/img/","english":"Explanation"},\
+{"korean":"설악산","image":"https://chrisashburner.github.io/img/","english":"Mt. Seolark"},\
+{"korean":"성격","image":"https://chrisashburner.github.io/img/","english":"Character"},\
+{"korean":"소개","image":"https://chrisashburner.github.io/img/","english":"Introduce"},\
+{"korean":"소식","image":"https://chrisashburner.github.io/img/","english":"The News"},\
+{"korean":"손","image":"https://chrisashburner.github.io/img/","english":"Hand"},\
+{"korean":"손님","image":"https://chrisashburner.github.io/img/","english":"Customer"},\
+{"korean":"수업","image":"https://chrisashburner.github.io/img/","english":"Class"},\
+{"korean":"수첩","image":"https://chrisashburner.github.io/img/","english":"Note"},\
+{"korean":"시간","image":"https://chrisashburner.github.io/img/","english":"Time"},\
+{"korean":"시계","image":"https://chrisashburner.github.io/img/","english":"Clock"},\
+{"korean":"시장","image":"https://chrisashburner.github.io/img/","english":"Market"},\
+{"korean":"시청","image":"https://chrisashburner.github.io/img/","english":"City Hall"},\
+{"korean":"시험","image":"https://chrisashburner.github.io/img/","english":"Exam"},\
+{"korean":"식당","image":"https://chrisashburner.github.io/img/","english":"Restaurant"},\
+{"korean":"식사","image":"https://chrisashburner.github.io/img/","english":"Meal"},\
+{"korean":"신문","image":"https://chrisashburner.github.io/img/","english":"Newspaper"},\
+{"korean":"신발","image":"https://chrisashburner.github.io/img/","english":"Shoes"},\
+{"korean":"아기","image":"https://chrisashburner.github.io/img/","english":"Baby"},\
+{"korean":"아래","image":"https://chrisashburner.github.io/img/","english":"Under"},\
+{"korean":"아버지","image":"https://chrisashburner.github.io/img/","english":"Father"},\
+{"korean":"아이스크림","image":"https://chrisashburner.github.io/img/","english":"Ice Cream"},\
+{"korean":"아저씨","image":"https://chrisashburner.github.io/img/","english":"Mister"},\
+{"korean":"아주머니","image":"https://chrisashburner.github.io/img/","english":"OldLady"},\
+{"korean":"아침","image":"https://chrisashburner.github.io/img/","english":"Morning"},\
+{"korean":"아침2","image":"https://chrisashburner.github.io/img/","english":"Morning2"},\
+{"korean":"아파트","image":"https://chrisashburner.github.io/img/","english":"Apartment"},\
+{"korean":"안","image":"https://chrisashburner.github.io/img/","english":"Within"},\
+{"korean":"안경","image":"https://chrisashburner.github.io/img/","english":"Glasses"},\
+{"korean":"안내","image":"https://chrisashburner.github.io/img/","english":"Guidance"},\
+{"korean":"앞","image":"https://chrisashburner.github.io/img/","english":"Front"},\
+{"korean":"야구","image":"https://chrisashburner.github.io/img/","english":"Baseball"},\
+{"korean":"약","image":"https://chrisashburner.github.io/img/","english":"About"},\
+{"korean":"약국","image":"https://chrisashburner.github.io/img/","english":"Pharmacy"},\
+{"korean":"약속","image":"https://chrisashburner.github.io/img/","english":"Appointment"},\
+{"korean":"어머니","image":"https://chrisashburner.github.io/img/","english":"Mother"},\
+{"korean":"어제","image":"https://chrisashburner.github.io/img/","english":"Yesterday"},\
+{"korean":"얼굴","image":"https://chrisashburner.github.io/img/","english":"Face"},\
+{"korean":"옛날","image":"https://chrisashburner.github.io/img/","english":"A Long Ago"},\
+{"korean":"여자","image":"https://chrisashburner.github.io/img/","english":"Woman"},\
+{"korean":"여행","image":"https://chrisashburner.github.io/img/","english":"Trip"},\
+{"korean":"역사","image":"https://chrisashburner.github.io/img/","english":"History"},\
+{"korean":"연락","image":"https://chrisashburner.github.io/img/","english":"Communication"},\
+{"korean":"연필","image":"https://chrisashburner.github.io/img/","english":"Pencil"},\
+{"korean":"영수증","image":"https://chrisashburner.github.io/img/","english":"Receipt"},\
+{"korean":"영어","image":"https://chrisashburner.github.io/img/","english":"English"},\
+{"korean":"영화","image":"https://chrisashburner.github.io/img/","english":"Movie"},\
+{"korean":"옆","image":"https://chrisashburner.github.io/img/","english":"Side"},\
+{"korean":"오래간만","image":"https://chrisashburner.github.io/img/","english":"Long Time No See"},\
+{"korean":"오랜만","image":"https://chrisashburner.github.io/img/","english":"Long Time No See"},\
+{"korean":"오른쪽","image":"https://chrisashburner.github.io/img/","english":"Right Side"},\
+{"korean":"오후","image":"https://chrisashburner.github.io/img/","english":"Afternoon"},\
+{"korean":"올해","image":"https://chrisashburner.github.io/img/","english":"This Year"},\
+{"korean":"옷","image":"https://chrisashburner.github.io/img/","english":"Dress"},\
+{"korean":"외국인","image":"https://chrisashburner.github.io/img/","english":"Foreigner"},\
+{"korean":"요리사","image":"https://chrisashburner.github.io/img/","english":"Cook"},\
+{"korean":"요즘","image":"https://chrisashburner.github.io/img/","english":"These Days"},\
+{"korean":"우산","image":"https://chrisashburner.github.io/img/","english":"Umbrella"},\
+{"korean":"우유","image":"https://chrisashburner.github.io/img/","english":"Milk"},\
+{"korean":"운동","image":"https://chrisashburner.github.io/img/","english":"Exercise"},\
+{"korean":"웬일","image":"https://chrisashburner.github.io/img/","english":"For Some Reason"},\
+{"korean":"위","image":"https://chrisashburner.github.io/img/","english":"Top"},\
+{"korean":"유학","image":"https://chrisashburner.github.io/img/","english":"Study Abroad"},\
+{"korean":"은행","image":"https://chrisashburner.github.io/img/","english":"Bank"},\
+{"korean":"음료수","image":"https://chrisashburner.github.io/img/","english":"Drink"},\
+{"korean":"음식","image":"https://chrisashburner.github.io/img/","english":"Food"},\
+{"korean":"음악회","image":"https://chrisashburner.github.io/img/","english":"Concert"},\
+{"korean":"의미","image":"https://chrisashburner.github.io/img/","english":"Meaning"},\
+{"korean":"의자","image":"https://chrisashburner.github.io/img/","english":"Chair"},\
+{"korean":"이름","image":"https://chrisashburner.github.io/img/","english":"Name"},\
+{"korean":"이번","image":"https://chrisashburner.github.io/img/","english":"This Time"},\
+{"korean":"이상","image":"https://chrisashburner.github.io/img/","english":"More Than"},\
+{"korean":"인터넷","image":"https://chrisashburner.github.io/img/","english":"Internet"},\
+{"korean":"일","image":"https://chrisashburner.github.io/img/","english":"Work"},\
+{"korean":"일본","image":"https://chrisashburner.github.io/img/","english":"Japan"},\
+{"korean":"일본어","image":"https://chrisashburner.github.io/img/","english":"Japanese"},\
+{"korean":"일요일","image":"https://chrisashburner.github.io/img/","english":"Sunday"},\*/
+
+/*{"korean":"작년","image":"https://chrisashburner.github.io/img/","english":"Last Year"},\
+{"korean":"잡지","image":"https://chrisashburner.github.io/img/","english":"Magazine"},\
+{"korean":"장소","image":"https://chrisashburner.github.io/img/","english":"Place"},\
+{"korean":"저녁","image":"https://chrisashburner.github.io/img/","english":"Dinner"},\
+{"korean":"전자사전","image":"https://chrisashburner.github.io/img/","english":"Electronic Dictionary"},\
+{"korean":"전화번호","image":"https://chrisashburner.github.io/img/","english":"Phone Number"},\
+{"korean":"점심","image":"https://chrisashburner.github.io/img/","english":"Lunch"},\
+{"korean":"정리","image":"https://chrisashburner.github.io/img/","english":"Theorem"},\
+{"korean":"제주도","image":"https://chrisashburner.github.io/img/","english":"Jeju Island"},\
+{"korean":"졸업","image":"https://chrisashburner.github.io/img/","english":"Graduated"},\
+{"korean":"주","image":"https://chrisashburner.github.io/img/","english":"Week"},\
+{"korean":"주말","image":"https://chrisashburner.github.io/img/","english":"Weekend"},\
+{"korean":"주소","image":"https://chrisashburner.github.io/img/","english":"Address"},\
+{"korean":"주인","image":"https://chrisashburner.github.io/img/","english":"Host"},\
+{"korean":"준비","image":"https://chrisashburner.github.io/img/","english":"Preparations"},\
+{"korean":"중국","image":"https://chrisashburner.github.io/img/","english":"China"},\
+{"korean":"지갑","image":"https://chrisashburner.github.io/img/","english":"Wallet"},\
+{"korean":"지난주","image":"https://chrisashburner.github.io/img/","english":"Last Week"},\
+{"korean":"지난해","image":"https://chrisashburner.github.io/img/","english":"Last Year"},\
+{"korean":"지하철","image":"https://chrisashburner.github.io/img/","english":"Subway"},\
+{"korean":"집","image":"https://chrisashburner.github.io/img/","english":"House"},\
+{"korean":"찻값","image":"https://chrisashburner.github.io/img/","english":"Tea Price"},\
+{"korean":"창문","image":"https://chrisashburner.github.io/img/","english":"Window"},\
+{"korean":"책","image":"https://chrisashburner.github.io/img/","english":"Book"},\
+{"korean":"책상","image":"https://chrisashburner.github.io/img/","english":"Desk"},\
+{"korean":"청소","image":"https://chrisashburner.github.io/img/","english":"Cleaning"},\
+{"korean":"축구","image":"https://chrisashburner.github.io/img/","english":"Football"},\
+{"korean":"취미","image":"https://chrisashburner.github.io/img/","english":"Hobby"},\
+{"korean":"취직","image":"https://chrisashburner.github.io/img/","english":"Employment"},\
+{"korean":"치마","image":"https://chrisashburner.github.io/img/","english":"Skirt"},\
+{"korean":"친구","image":"https://chrisashburner.github.io/img/","english":"Friend"},\
+{"korean":"침대","image":"https://chrisashburner.github.io/img/","english":"Bed"},\
+{"korean":"카메라","image":"https://chrisashburner.github.io/img/","english":"Camera"},\
+{"korean":"캐나다","image":"https://chrisashburner.github.io/img/","english":"Canada"},\
+{"korean":"커피","image":"https://chrisashburner.github.io/img/","english":"Coffee"},\
+{"korean":"컴퓨터","image":"https://chrisashburner.github.io/img/","english":"Computer"},\
+{"korean":"큰형","image":"https://chrisashburner.github.io/img/","english":"Big Brother"},\
+{"korean":"테니스장","image":"https://chrisashburner.github.io/img/","english":"Tennis Court"},\
+{"korean":"토요일","image":"https://chrisashburner.github.io/img/","english":"Saturday"},\
+{"korean":"통장","image":"https://chrisashburner.github.io/img/","english":"Bank Book"},\
+{"korean":"파란색","image":"https://chrisashburner.github.io/img/","english":"Blue"},\
+{"korean":"파티","image":"https://chrisashburner.github.io/img/","english":"Party"},\
+{"korean":"편지","image":"https://chrisashburner.github.io/img/","english":"Letter"},\
+{"korean":"평일","image":"https://chrisashburner.github.io/img/","english":"Weekday"},\
+{"korean":"포도","image":"https://chrisashburner.github.io/img/","english":"Grape"},\
+{"korean":"표","image":"https://chrisashburner.github.io/img/","english":"Table"},\
+{"korean":"품목","image":"https://chrisashburner.github.io/img/","english":"Item"},\
+{"korean":"피아노","image":"https://chrisashburner.github.io/img/","english":"Piano"},\
+{"korean":"필요","image":"https://chrisashburner.github.io/img/","english":"Need"},\
+{"korean":"하숙집","image":"https://chrisashburner.github.io/img/","english":"Boarding House"},\
+{"korean":"학원","image":"https://chrisashburner.github.io/img/","english":"Academy"},\
+{"korean":"한국","image":"https://chrisashburner.github.io/img/","english":"Korea"},\
+{"korean":"한국말","image":"https://chrisashburner.github.io/img/","english":"Korean"},\
+{"korean":"한국어","image":"https://chrisashburner.github.io/img/","english":"Korean"},\
+{"korean":"한복","image":"https://chrisashburner.github.io/img/","english":"HanBok"},\
+{"korean":"한식집","image":"https://chrisashburner.github.io/img/","english":"Korean Restaurant"},\
+{"korean":"할머니","image":"https://chrisashburner.github.io/img/","english":"Grandmother"},\
+{"korean":"할아버지","image":"https://chrisashburner.github.io/img/","english":"Grandfather"},\
+{"korean":"할인","image":"https://chrisashburner.github.io/img/","english":"Sale"},\
+{"korean":"행사","image":"https://chrisashburner.github.io/img/","english":"Event"},\
+{"korean":"형","image":"https://chrisashburner.github.io/img/","english":"Brother"},\
+{"korean":"호","image":"https://chrisashburner.github.io/img/","english":"Arc"},\
+{"korean":"호선","image":"https://chrisashburner.github.io/img/","english":"Line"},\
+{"korean":"회사","image":"https://chrisashburner.github.io/img/","english":"Company"},\
+{"korean":"회사원","image":"https://chrisashburner.github.io/img/","english":"Employee"},\
+{"korean":"회의","image":"https://chrisashburner.github.io/img/","english":"Conference"},\
+{"korean":"후","image":"https://chrisashburner.github.io/img/","english":"After"},\
+{"korean":"휴일","image":"https://chrisashburner.github.io/img/","english":"Holiday"},\
+{"korean":"희망","image":"https://chrisashburner.github.io/img/","english":"Hope"},\
+{"korean":"힘","image":"https://chrisashburner.github.io/img/","english":"Power"},\*/

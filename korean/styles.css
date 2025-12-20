@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  background: #29465b;
+}
+
+@media all and (orientation:portrait) {
+  /* Styles for Portrait screen */
+  .memory-game {
+    width: 100%;
+    height: 40%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+  }
+
+  .speechPrompt,
+  .prompt {
+    position: absolute; 
+    z-index:1000; 
+    left:25%; 
+    transform: scale(1);
+  }
+  
+}
+@media all and (orientation:landscape) {
+  /* Styles for Landscape screen */
+  .memory-game {
+    width: 70%;
+    height: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+  }   
+
+  .speechPrompt,
+  .prompt {
+    position: absolute; 
+    z-index:1000; 
+    left:40%; 
+    transform: scale(0.9);
+  }
+  
+  
+}
+
+.memory-card {
+  width: calc(20% - 10px);
+  height: calc(25% - 10px);
+  margin: 5px;
+  position: relative;
+  cursor: pointer;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .3s;
+  transform-origin: center right;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform .3s;
+}
+
+.memory-card.flip {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  position: absolute;
+  border-radius: 5px;
+  background: #1C7CCC;
+  backface-visibility: hidden;
+  object-fit: scale-down;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+.invisible {
+	visibility: hidden;
+  height: 0px;
+}
+
+.center {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  text-align: center;
+  opacity: 0.8;
+  left:250px;
+}
+
+.divider{
+  width:5px;
+  height:auto;
+  display:inline-block;
+}
+
+.scaled {
+  transform: scale(0.7); /* Equal to scaleX(0.7) scaleY(0.7) */
+}
+
+.centre-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -100px;
+  z-index: 1;
+}​
