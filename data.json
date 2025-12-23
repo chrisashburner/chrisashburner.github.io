@@ -7,9 +7,9 @@ JSON_String_Test='[\
 {"chinese":"见面 Jiànmiàn","english":"to meet"}]';
 
 JSON_String='[\
-{"chinese":"做 Zuò","english":"to do", "image":""},\
-{"chinese":"去 Qù","english":"to go", "image":""},\
-{"chinese":"来 Lái","english":"to come", "image":""},\
-{"chinese":"看 Kàn","english":"to see", "image":""},\
-{"chinese":"吃 Chī","english":"to eat", "image":""},\
-{"chinese":"见面 Jiànmiàn","english":"to meet", "image":""}]';
+{"chinese":"做 Zuò","english":"to do","image":""},\
+{"chinese":"去 Qù","english":"to go","image":""},\
+{"chinese":"来 Lái","english":"to come","image":""},\
+{"chinese":"看 Kàn","english":"to see","image":""},\
+{"chinese":"吃 Chī","english":"to eat","image":""},\
+{"chinese":"见面 Jiànmiàn","english":"to meet","image":""}]';
