@@ -1,5 +1,22 @@
 //todo: cards should fold into stack off side of table to remove clutter
 
+import { StrSimilar } from 'str-similar';
+
+const similarity = new StrSimilar();
+
+// Compare similar Chinese phrases
+const sim1 = similarity.similarity('今天天气不错', '天气今天真不错');
+console.log(sim1); // Should return a high similarity score
+
+// Compare with English
+const sim2 = similarity.similarity('你好 World', 'Hello 世界');
+console.log(sim2); // Will compare character-by-character
+
+// Compare identical strings
+const sim3 = similarity.similarity('学习', '学习');
+console.log(sim3); // Should return 1 (100%)
+
+
 
 //Let's check if stt can be complete
 try {
