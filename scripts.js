@@ -266,7 +266,7 @@ for (i = 0; i < JSON_data.length; i++) {
 //Text to Speech
 function talk(text){  
   lockBoard = true;
-  responsiveVoice.speak(text, 'Chinese Female');
+  responsiveVoice.speak(text, 'Chinese Male');
   setTimeout(() => {
     lockBoard = false;
   }, 1000);
