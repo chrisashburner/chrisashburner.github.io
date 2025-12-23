@@ -7,9 +7,17 @@ JSON_String_Test='[\
 {"chinese":"见面 Jiànmiàn","english":"to meet"}]';
 
 JSON_String='[\
-{"chinese":"做 Zuò","english":"to do","image":""},\
-{"chinese":"去 Qù","english":"to go","image":""},\
-{"chinese":"来 Lái","english":"to come","image":""},\
-{"chinese":"看 Kàn","english":"to see","image":""},\
-{"chinese":"吃 Chī","english":"to eat","image":""},\
-{"chinese":"见面 Jiànmiàn","english":"to meet","image":""}]';
+{"chinese":"做 (Zuò)","english":"to do","image":""},\
+{"chinese":"去 (Qù)","english":"to go","image":""},\
+{"chinese":"来 (Lái)","english":"to come","image":""},\
+{"chinese":"看 (Kàn)","english":"to see","image":""},\
+{"chinese":"吃 (Chī)","english":"to eat","image":""},\
+{"chinese":"你好 (Nǐ hǎo)","english": "Hello","image":""},\
+{"chinese":"谢谢 (Xièxie)","english": "Thank you","image":""},\
+{"chinese":"不客气 (Bù kèqì)","english": "You're welcome","image":""},\
+{"chinese":"对不起 (Duìbuqǐ)","english": "Sorry","image":""},\
+{"chinese":"我 (Wǒ)","english": "I, me","image":""},\
+{"chinese":"你 (Nǐ)","english": "You (singular)","image":""},\
+{"chinese":"是 (Shì)","english": "To be (is, am, are)","image":""},\
+{"chinese":"有 (Yǒu)","english": "To have","image":""},\
+{"chinese":"见面 (Jiànmiàn)","english":"to meet","image":""}]';
